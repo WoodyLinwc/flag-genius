@@ -394,8 +394,8 @@ const App: React.FC = () => {
 
       <footer className="relative z-10 p-6 text-center text-[#d2b48c] text-lg font-['VT323']">
         <p>
-          &copy; {new Date().getFullYear()} FlagGenius. Built with React &
-          Tailwind.
+          &copy; {new Date().getFullYear()} Woody Lin · FlagGenius · Built with
+          React & Tailwind.
         </p>
       </footer>
 
