@@ -1,4 +1,4 @@
-export type Language = 'en' | 'zh';
+export type Language = "en" | "zh";
 
 export interface Country {
   code: string;
@@ -10,13 +10,20 @@ export interface Country {
 }
 
 export enum GameMode {
-  FLAG_TO_COUNTRY = 'FLAG_TO_COUNTRY',
-  COUNTRY_TO_FLAG = 'COUNTRY_TO_FLAG',
+  FLAG_TO_COUNTRY = "FLAG_TO_COUNTRY",
+  COUNTRY_TO_FLAG = "COUNTRY_TO_FLAG",
+}
+
+export enum StudyType {
+  WRONG = "WRONG",
+  RIGHT = "RIGHT",
 }
 
 export enum GameState {
-  MENU = 'MENU',
-  PLAYING = 'PLAYING',
+  MENU = "MENU",
+  PLAYING = "PLAYING",
+  STUDY_SELECT = "STUDY_SELECT",
+  STUDYING = "STUDYING",
 }
 
 export interface Question {
