@@ -1,829 +1,2117 @@
-import { Country } from './types';
+import { Country } from "./types";
 
 export const COUNTRIES: Country[] = [
-  { 
-    code: 'AD', name: 'Andorra', nameZh: '安道尔', emoji: '🇦🇩',
-    funFacts: ["It has no airport.", "The official language is Catalan.", "It is ruled by two princes."],
-    funFactsZh: ["它没有机场。", "官方语言是加泰罗尼亚语。", "它由两位大公共同统治。"]
-  },
-  { 
-    code: 'AE', name: 'United Arab Emirates', nameZh: '阿联酋', emoji: '🇦🇪',
-    funFacts: ["Home to the world's tallest building.", "It has a minister for AI.", "Falconry is a popular sport."],
-    funFactsZh: ["拥有世界最高的建筑。", "它有专门的AI部长。", "猎鹰是一项流行的运动。"]
-  },
-  { 
-    code: 'AF', name: 'Afghanistan', nameZh: '阿富汗', emoji: '🇦🇫',
-    funFacts: ["Poetry is a big part of culture.", "New Year is celebrated in March.", "The national game is Buzkashi."],
-    funFactsZh: ["诗歌是文化的重要组成部分。", "新年在三月庆祝。", "国球是马背刁羊。"]
-  },
-  { 
-    code: 'AG', name: 'Antigua & Barbuda', nameZh: '安提瓜和巴布达', emoji: '🇦🇬',
-    funFacts: ["It has 365 beaches.", "Home to a famous sailing week.", "Cricket is the national sport."],
-    funFactsZh: ["它有365个海滩。", "举办著名的帆船周。", "板球是国球。"]
-  },
-  { 
-    code: 'AL', name: 'Albania', nameZh: '阿尔巴尼亚', emoji: '🇦🇱',
-    funFacts: ["It has over 170,000 bunkers.", "Nodding means 'no' here.", "Mother Teresa had Albanian roots."],
-    funFactsZh: ["它有超过17万个碉堡。", "这里点头表示'不'。", "特蕾莎修女有阿尔巴尼亚血统。"]
-  },
-  { 
-    code: 'AM', name: 'Armenia', nameZh: '亚美尼亚', emoji: '🇦🇲',
-    funFacts: ["Chess is a compulsory subject.", "First country to adopt Christianity.", "Mt Ararat is a national symbol."],
-    funFactsZh: ["国际象棋是必修课。", "第一个将基督教定为国教的国家。", "亚拉拉特山是国家象征。"]
-  },
-  { 
-    code: 'AO', name: 'Angola', nameZh: '安哥拉', emoji: '🇦🇴',
-    funFacts: ["Its flag features a machete.", "Kizomba music originated here.", "It has a very young population."],
-    funFactsZh: ["国旗上有砍刀图案。", "Kizomba音乐起源于此。", "它的人口非常年轻。"]
-  },
-  { 
-    code: 'AR', name: 'Argentina', nameZh: '阿根廷', emoji: '🇦🇷',
-    funFacts: ["Birthplace of the Tango.", "Name comes from 'Silver'.", "They eat the most beef per capita."],
-    funFactsZh: ["探戈的发源地。", "名字来源于'银'。", "人均牛肉消费量最高。"]
-  },
-  { 
-    code: 'AT', name: 'Austria', nameZh: '奥地利', emoji: '🇦🇹',
-    funFacts: ["Home of Mozart and Schubert.", "Famous for Weiner Schnitzel.", "About 62% is covered by Alps."],
-    funFactsZh: ["莫扎特和舒伯特的故乡。", "以维也纳炸肉排闻名。", "约62%被阿尔卑斯山覆盖。"]
-  },
-  { 
-    code: 'AU', name: 'Australia', nameZh: '澳大利亚', emoji: '🇦🇺',
-    funFacts: ["Home to the Great Barrier Reef.", "Kangaroos outnumber humans.", "It is a country and a continent."],
-    funFactsZh: ["大堡礁的所在地。", "袋鼠数量超过人类。", "它既是国家也是大陆。"]
-  },
-  { 
-    code: 'AZ', name: 'Azerbaijan', nameZh: '阿塞拜疆', emoji: '🇦🇿',
-    funFacts: ["Known as the Land of Fire.", "They love drinking tea with jam.", "Baku is the City of Winds."],
-    funFactsZh: ["被称为'火之国'。", "喜欢喝茶配果酱。", "巴库是'风之城'。"]
-  },
-  { 
-    code: 'BA', name: 'Bosnia & Herzegovina', nameZh: '波黑', emoji: '🇧🇦',
-    funFacts: ["Sarajevo hosted the 1984 Winter Olympics.", "It has one of the last jungles in Europe.", "Coffee is a daily ritual."],
-    funFactsZh: ["萨拉热窝举办了1984年冬奥会。", "拥有欧洲仅存的丛林之一。", "喝咖啡是日常仪式。"]
-  },
-  { 
-    code: 'BB', name: 'Barbados', nameZh: '巴巴多斯', emoji: '🇧🇧',
-    funFacts: ["Birthplace of Rihanna.", "It is the birthplace of Rum.", "They have flying fish."],
-    funFactsZh: ["蕾哈娜的出生地。", "朗姆酒的发源地。", "这里有飞鱼。"]
-  },
-  { 
-    code: 'BD', name: 'Bangladesh', nameZh: '孟加拉国', emoji: '🇧🇩',
-    funFacts: ["Home to the Royal Bengal Tiger.", "It has 6 seasons, not 4.", "Cricket is extremely popular."],
-    funFactsZh: ["孟加拉虎的家乡。", "它有6个季节，不是4个。", "板球非常受欢迎。"]
-  },
-  { 
-    code: 'BE', name: 'Belgium', nameZh: '比利时', emoji: '🇧🇪',
-    funFacts: ["Famous for chocolate and waffles.", "They invented French Fries.", "Home to the EU headquarters."],
-    funFactsZh: ["以巧克力和华夫饼闻名。", "他们发明了炸薯条。", "欧盟总部所在地。"]
-  },
-  { 
-    code: 'BG', name: 'Bulgaria', nameZh: '保加利亚', emoji: '🇧🇬',
-    funFacts: ["Produces 70% of the world's rose oil.", "Nodding means 'No' here.", "They use the Cyrillic alphabet."],
-    funFactsZh: ["生产全球70%的玫瑰油。", "点头表示'不'。", "使用西里尔字母。"]
-  },
-  { 
-    code: 'BH', name: 'Bahrain', nameZh: '巴林', emoji: '🇧🇭',
-    funFacts: ["Home to the Tree of Life.", "It is an archipelago of 33 islands.", "Pearl diving was huge here."],
-    funFactsZh: ["生命之树的所在地。", "由33个岛屿组成的群岛。", "采珠业曾非常兴盛。"]
-  },
-  { 
-    code: 'BI', name: 'Burundi', nameZh: '布隆迪', emoji: '🇧🇮',
-    funFacts: ["Jogging in groups was banned.", "Gustave the crocodile is a legend.", "It is the heart of Africa."],
-    funFactsZh: ["曾禁止集体慢跑。", "鳄鱼古斯塔夫是个传说。", "它是非洲的心脏。"]
-  },
-  { 
-    code: 'BJ', name: 'Benin', nameZh: '贝宁', emoji: '🇧🇯',
-    funFacts: ["Birthplace of Voodoo.", "Home to the 'Venice of Africa'.", "Snakes are revered here."],
-    funFactsZh: ["伏都教的发源地。", "拥有'非洲威尼斯'。", "这里尊崇蛇。"]
-  },
-  { 
-    code: 'BO', name: 'Bolivia', nameZh: '玻利维亚', emoji: '🇧🇴',
-    funFacts: ["Home to the largest salt flat.", "It has two capitals.", "Named after Simon Bolivar."],
-    funFactsZh: ["拥有最大的盐沼。", "它有两个首都。", "以西蒙·玻利瓦尔命名。"]
-  },
-  { 
-    code: 'BR', name: 'Brazil', nameZh: '巴西', emoji: '🇧🇷',
-    funFacts: ["Largest coffee producer.", "Home to the Amazon Rainforest.", "They speak Portuguese."],
-    funFactsZh: ["最大的咖啡生产国。", "亚马逊雨林的所在地。", "他们说葡萄牙语。"]
-  },
-  { 
-    code: 'BS', name: 'Bahamas', nameZh: '巴哈马', emoji: '🇧🇸',
-    funFacts: ["It has swimming pigs.", "Home to the deepest blue hole.", "Once a haven for pirates."],
-    funFactsZh: ["这里有会游泳的猪。", "拥有最深的蓝洞。", "曾经是海盗的天堂。"]
-  },
-  { 
-    code: 'BT', name: 'Bhutan', nameZh: '不丹', emoji: '🇧🇹',
-    funFacts: ["Measures Gross National Happiness.", "Plastic bags are banned.", "No traffic lights in the capital."],
-    funFactsZh: ["衡量国民幸福总值。", "禁止使用塑料袋。", "首都全无红绿灯。"]
-  },
-  { 
-    code: 'BW', name: 'Botswana', nameZh: '博茨瓦纳', emoji: '🇧🇼',
-    funFacts: ["Home to the world's largest elephant population.", "The Okavango Delta is here.", "Diamonds are a main export."],
-    funFactsZh: ["拥有世界最大的大象种群。", "奥卡万戈三角洲在此。", "钻石是主要出口产品。"]
-  },
-  { 
-    code: 'BY', name: 'Belarus', nameZh: '白俄罗斯', emoji: '🇧🇾',
-    funFacts: ["40% is covered by forests.", "Potatoes are a staple food.", "Home to European Bison."],
-    funFactsZh: ["40%被森林覆盖。", "土豆是主食。", "欧洲野牛的家园。"]
-  },
-  { 
-    code: 'BZ', name: 'Belize', nameZh: '伯利兹', emoji: '🇧🇿',
-    funFacts: ["The only English speaking country in Central America.", "Home to the Great Blue Hole.", "Jaguar sanctuary exists here."],
-    funFactsZh: ["中美洲唯一的英语国家。", "大蓝洞所在地。", "这里有美洲虎保护区。"]
-  },
-  { 
-    code: 'CA', name: 'Canada', nameZh: '加拿大', emoji: '🇨🇦',
-    funFacts: ["Has the longest coastline.", "More lakes than the rest of the world combined.", "Maple syrup capital."],
-    funFactsZh: ["拥有最长的海岸线。", "湖泊数量超过世界其他地区总和。", "枫糖浆之都。"]
-  },
-  { 
-    code: 'CD', name: 'Congo (DRC)', nameZh: '刚果（金）', emoji: '🇨🇩',
-    funFacts: ["Second largest country in Africa.", "Rich in minerals like Cobalt.", "Home to Bonobo apes."],
-    funFactsZh: ["非洲第二大国。", "富含钴等矿产。", "倭黑猩猩的家园。"]
-  },
-  { 
-    code: 'CF', name: 'Central African Republic', nameZh: '中非共和国', emoji: '🇨🇫',
-    funFacts: ["Located in the exact center of Africa.", "Rich in diamonds and gold.", "Home to forest elephants."],
-    funFactsZh: ["位于非洲正中心。", "盛产钻石和黄金。", "森林象的家园。"]
-  },
-  { 
-    code: 'CG', name: 'Congo (Republic)', nameZh: '刚果（布）', emoji: '🇨🇬',
-    funFacts: ["Brazzaville is across the river from Kinshasa.", "Known for Sapeurs fashion.", "Deep rain forests."],
-    funFactsZh: ["首都与金沙萨隔河相望。", "以萨普尔时尚闻名。", "拥有茂密的雨林。"]
-  },
-  { 
-    code: 'CH', name: 'Switzerland', nameZh: '瑞士', emoji: '🇨🇭',
-    funFacts: ["Has 4 official languages.", "Famous for watches and chocolate.", "It has nuclear bunkers for everyone."],
-    funFactsZh: ["有4种官方语言。", "以手表和巧克力闻名。", "为每个人都准备了核掩体。"]
-  },
-  { 
-    code: 'CI', name: 'Côte d’Ivoire', nameZh: '科特迪瓦', emoji: '🇨🇮',
-    funFacts: ["World's largest cocoa producer.", "Home to the biggest church in the world.", "Name means Ivory Coast."],
-    funFactsZh: ["世界最大可可生产国。", "拥有世界上最大的教堂。", "名字意为象牙海岸。"]
-  },
-  { 
-    code: 'CL', name: 'Chile', nameZh: '智利', emoji: '🇨🇱',
-    funFacts: ["Longest country in the world.", "Home to the Atacama Desert.", "They have penguins."],
-    funFactsZh: ["世界上最狭长的国家。", "阿塔卡马沙漠所在地。", "那里有企鹅。"]
-  },
-  { 
-    code: 'CM', name: 'Cameroon', nameZh: '喀麦隆', emoji: '🇨🇲',
-    funFacts: ["Known as 'Africa in miniature'.", "Famous for its football team.", "Has diverse landscapes."],
-    funFactsZh: ["被称为'微缩非洲'。", "以足球队闻名。", "拥有多样的地貌。"]
-  },
-  { 
-    code: 'CN', name: 'China', nameZh: '中国', emoji: '🇨🇳',
-    funFacts: ["Home to the Giant Panda.", "Built the Great Wall.", "Invented paper and gunpowder."],
-    funFactsZh: ["大熊猫的故乡。", "建造了长城。", "发明了造纸术和火药。"]
-  },
-  { 
-    code: 'CO', name: 'Colombia', nameZh: '哥伦比亚', emoji: '🇨🇴',
-    funFacts: ["Produces fine emeralds.", "Famous for coffee.", "Has the river of 5 colors."],
-    funFactsZh: ["出产优质祖母绿。", "以咖啡闻名。", "拥有五色河。"]
-  },
-  { 
-    code: 'CR', name: 'Costa Rica', nameZh: '哥斯达黎加', emoji: '🇨🇷',
-    funFacts: ["It has no army.", "25% of the land is protected.", "One of the happiest countries."],
-    funFactsZh: ["它没有军队。", "25%的土地受保护。", "最幸福的国家之一。"]
-  },
-  { 
-    code: 'CU', name: 'Cuba', nameZh: '古巴', emoji: '🇨🇺',
-    funFacts: ["Famous for vintage cars.", "Home of Salsa music.", "Cigars are iconic."],
-    funFactsZh: ["以老爷车闻名。", "萨尔萨音乐之乡。", "雪茄是标志性的。"]
-  },
-  { 
-    code: 'CV', name: 'Cape Verde', nameZh: '佛得角', emoji: '🇨🇻',
-    funFacts: ["It is an island nation.", "Famous for Morna music.", "Was uninhabited until the 15th century."],
-    funFactsZh: ["它是一个岛国。", "以莫尔纳音乐闻名。", "15世纪前无人居住。"]
-  },
-  { 
-    code: 'CY', name: 'Cyprus', nameZh: '塞浦路斯', emoji: '🇨🇾',
-    funFacts: ["Legendary birthplace of Aphrodite.", "Cats outnumber humans.", "Capital city is divided."],
-    funFactsZh: ["阿佛洛狄忒的传说诞生地。", "猫比人多。", "首都是分裂的。"]
-  },
-  { 
-    code: 'CZ', name: 'Czechia', nameZh: '捷克', emoji: '🇨🇿',
-    funFacts: ["Invented the contact lens.", "Drink the most beer per capita.", "Prague is the City of Spires."],
-    funFactsZh: ["发明了隐形眼镜。", "人均啤酒消费量最高。", "布拉格是千塔之城。"]
-  },
-  { 
-    code: 'DE', name: 'Germany', nameZh: '德国', emoji: '🇩🇪',
-    funFacts: ["There are over 1,000 kinds of sausages.", "Oktoberfest is huge.", "Highways have no speed limit."],
-    funFactsZh: ["有超过1000种香肠。", "慕尼黑啤酒节很盛大。", "高速公路不限速。"]
-  },
-  { 
-    code: 'DJ', name: 'Djibouti', nameZh: '吉布提', emoji: '🇩🇯',
-    funFacts: ["Located at the Red Sea entrance.", "Lake Assal is super salty.", "Known as a land of geological marvels."],
-    funFactsZh: ["位于红海入口。", "阿萨勒湖非常咸。", "被称为地质奇迹之地。"]
-  },
-  { 
-    code: 'DK', name: 'Denmark', nameZh: '丹麦', emoji: '🇩🇰',
-    funFacts: ["Home of Lego.", "Happiest country in the world usually.", "They love cycling."],
-    funFactsZh: ["乐高的故乡。", "通常是世界上最幸福的国家。", "他们热爱骑行。"]
-  },
-  { 
-    code: 'DM', name: 'Dominica', nameZh: '多米尼克', emoji: '🇩🇲',
-    funFacts: ["Known as the Nature Island.", "Has a boiling lake.", "Last home of the Carib people."],
-    funFactsZh: ["被称为自然之岛。", "有一个沸腾湖。", "加勒比人的最后家园。"]
-  },
-  { 
-    code: 'DO', name: 'Dominican Republic', nameZh: '多米尼加', emoji: '🇩🇴',
-    funFacts: ["Home to the Caribbean's highest peak.", "Baseball is the favorite sport.", "Merengue dance started here."],
-    funFactsZh: ["加勒比最高峰所在地。", "棒球是最爱的运动。", "梅伦格舞起源于此。"]
-  },
-  { 
-    code: 'DZ', name: 'Algeria', nameZh: '阿尔及利亚', emoji: '🇩🇿',
-    funFacts: ["Largest country in Africa.", "Sahara covers 80% of it.", "Fennec fox is the national animal."],
-    funFactsZh: ["非洲最大的国家。", "撒哈拉覆盖了80%。", "耳廓狐是国兽。"]
-  },
-  { 
-    code: 'EC', name: 'Ecuador', nameZh: '厄瓜多尔', emoji: '🇪🇨',
-    funFacts: ["Named after the Equator.", "Galapagos Islands are here.", "Uses the US Dollar."],
-    funFactsZh: ["以赤道命名。", "加拉帕戈斯群岛在此。", "使用美元。"]
-  },
-  { 
-    code: 'EE', name: 'Estonia', nameZh: '爱沙尼亚', emoji: '🇪🇪',
-    funFacts: ["Birthplace of Skype.", "Internet is a human right.", "Has over 2000 islands."],
-    funFactsZh: ["Skype的诞生地。", "上网是人权。", "拥有超过2000个岛屿。"]
-  },
-  { 
-    code: 'EG', name: 'Egypt', nameZh: '埃及', emoji: '🇪🇬',
-    funFacts: ["Home to the Pyramids.", "The Nile is the longest river.", "Invented the 365-day calendar."],
-    funFactsZh: ["金字塔的所在地。", "尼罗河是最长的河流。", "发明了365天日历。"]
-  },
-  { 
-    code: 'ES', name: 'Spain', nameZh: '西班牙', emoji: '🇪🇸',
-    funFacts: ["Produces almost half the world's olive oil.", "La Tomatina festival is messy.", "Siesta is famous."],
-    funFactsZh: ["生产全球近一半橄榄油。", "番茄大战很混乱。", "午睡习俗闻名。"]
-  },
-  { 
-    code: 'ET', name: 'Ethiopia', nameZh: '埃塞俄比亚', emoji: '🇪🇹',
-    funFacts: ["Coffee originated here.", "Has its own calendar (7 years behind).", "Never colonized."],
-    funFactsZh: ["咖啡起源于此。", "有自己的日历（慢7年）。", "从未被殖民。"]
-  },
-  { 
-    code: 'FI', name: 'Finland', nameZh: '芬兰', emoji: '🇫🇮',
-    funFacts: ["More saunas than cars.", "Home of Santa Claus village.", "Highest coffee consumption."],
-    funFactsZh: ["桑拿房比汽车多。", "圣诞老人村所在地。", "咖啡消费量最高。"]
-  },
-  { 
-    code: 'FJ', name: 'Fiji', nameZh: '斐济', emoji: '🇫🇯',
-    funFacts: ["Composed of 333 islands.", "Fire walking originated here.", "Rugby is huge."],
-    funFactsZh: ["由333个岛屿组成。", "踏火仪式起源于此。", "橄榄球非常盛行。"]
-  },
-  { 
-    code: 'FR', name: 'France', nameZh: '法国', emoji: '🇫🇷',
-    funFacts: ["Most visited country.", "Invented cinema.", "Has 12 time zones."],
-    funFactsZh: ["访问量最大的国家。", "发明了电影。", "拥有12个时区。"]
-  },
-  { 
-    code: 'GA', name: 'Gabon', nameZh: '加蓬', emoji: '🇬🇦',
-    funFacts: ["80% rainforest.", "Home to surfing hippos.", "Gorilla paradise."],
-    funFactsZh: ["80%是雨林。", "冲浪河马的家园。", "大猩猩的天堂。"]
-  },
-  { 
-    code: 'GB', name: 'United Kingdom', nameZh: '英国', emoji: '🇬🇧',
-    funFacts: ["Tea obsession is real.", "Queen owns the swans.", "London has over 170 museums."],
-    funFactsZh: ["对茶非常痴迷。", "天鹅归女王所有。", "伦敦有170多个博物馆。"]
-  },
-  { 
-    code: 'GD', name: 'Grenada', nameZh: '格林纳达', emoji: '🇬🇩',
-    funFacts: ["Known as the Spice Isle.", "Famous for nutmeg.", "Has an underwater sculpture park."],
-    funFactsZh: ["被称为香料之岛。", "以肉豆蔻闻名。", "拥有水下雕塑公园。"]
-  },
-  { 
-    code: 'GE', name: 'Georgia', nameZh: '格鲁吉亚', emoji: '🇬🇪',
-    funFacts: ["Birthplace of wine.", "Has its own unique alphabet.", "Very hospitable culture."],
-    funFactsZh: ["葡萄酒的发源地。", "拥有独特的字母表。", "非常好客的文化。"]
-  },
-  { 
-    code: 'GH', name: 'Ghana', nameZh: '加纳', emoji: '🇬🇭',
-    funFacts: ["Name means 'Warrior King'.", "Lake Volta is man-made.", "Famous for Kente cloth."],
-    funFactsZh: ["名字意为'勇士之王'。", "沃尔特湖是人造的。", "以肯特布闻名。"]
-  },
-  { 
-    code: 'GM', name: 'Gambia', nameZh: '冈比亚', emoji: '🇬🇲',
-    funFacts: ["Smallest country in mainland Africa.", "Named after the river.", "Known for birdwatching."],
-    funFactsZh: ["非洲大陆最小的国家。", "以河流命名。", "以观鸟闻名。"]
-  },
-  { 
-    code: 'GN', name: 'Guinea', nameZh: '几内亚', emoji: '🇬🇳',
-    funFacts: ["Source of the Niger river.", "Rich in Bauxite.", "Chimpanzees use tools here."],
-    funFactsZh: ["尼日尔河的源头。", "富含铝土矿。", "这里的黑猩猩会使用工具。"]
-  },
-  { 
-    code: 'GR', name: 'Greece', nameZh: '希腊', emoji: '🇬🇷',
-    funFacts: ["Birthplace of democracy.", "Has thousands of islands.", "Olympics started here."],
-    funFactsZh: ["民主的发源地。", "拥有数千个岛屿。", "奥林匹克起源于此。"]
-  },
-  { 
-    code: 'GT', name: 'Guatemala', nameZh: '危地马拉', emoji: '🇬🇹',
-    funFacts: ["Heart of the Mayan world.", "Instant coffee invented here.", "Chocolate originated here."],
-    funFactsZh: ["玛雅世界的中心。", "速溶咖啡在此发明。", "巧克力起源于此。"]
-  },
-  { 
-    code: 'GY', name: 'Guyana', nameZh: '圭亚那', emoji: '🇬🇾',
-    funFacts: ["Only English speaking country in South America.", "Home to Kaieteur Falls.", "Land of Many Waters."],
-    funFactsZh: ["南美唯一英语国家。", "凯厄图尔瀑布所在地。", "多水之国。"]
-  },
-  { 
-    code: 'HN', name: 'Honduras', nameZh: '洪都拉斯', emoji: '🇭🇳',
-    funFacts: ["Known for banana exports.", "Has Mayan ruins at Copan.", "Rain of fish legend."],
-    funFactsZh: ["以香蕉出口闻名。", "科潘有玛雅遗址。", "有鱼雨的传说。"]
-  },
-  { 
-    code: 'HR', name: 'Croatia', nameZh: '克罗地亚', emoji: '🇭🇷',
-    funFacts: ["Invented the necktie.", "Game of Thrones filmed here.", "Dalmatian dogs originated here."],
-    funFactsZh: ["发明了领带。", "《权力的游戏》在此取景。", "斑点狗起源于此。"]
-  },
-  { 
-    code: 'HT', name: 'Haiti', nameZh: '海地', emoji: '🇭🇹',
-    funFacts: ["First black republic.", "Voodoo is an official religion.", "Share island with Dominican Republic."],
-    funFactsZh: ["第一个黑人共和国。", "伏都教是官方宗教。", "与多米尼加共享岛屿。"]
-  },
-  { 
-    code: 'HU', name: 'Hungary', nameZh: '匈牙利', emoji: '🇭🇺',
-    funFacts: ["Invented the Rubik's cube.", "Capital of thermal baths.", "Paprika is the main spice."],
-    funFactsZh: ["发明了魔方。", "温泉浴之都。", "红辣椒是主要香料。"]
-  },
-  { 
-    code: 'ID', name: 'Indonesia', nameZh: '印度尼西亚', emoji: '🇮🇩',
-    funFacts: ["Largest archipelago in the world.", "Home to Komodo Dragons.", "Over 700 languages."],
-    funFactsZh: ["世界最大群岛国家。", "科莫多龙的家园。", "超过700种语言。"]
-  },
-  { 
-    code: 'IE', name: 'Ireland', nameZh: '爱尔兰', emoji: '🇮🇪',
-    funFacts: ["St. Patrick wasn't Irish.", "Halloween originated here.", "No snakes exist here."],
-    funFactsZh: ["圣帕特里克不是爱尔兰人。", "万圣节起源于此。", "这里没有蛇。"]
-  },
-  { 
-    code: 'IL', name: 'Israel', nameZh: '以色列', emoji: '🇮🇱',
-    funFacts: ["Lowest point on earth (Dead Sea).", "Drip irrigation invented here.", "Official languages Hebrew & Arabic."],
-    funFactsZh: ["地球最低点（死海）。", "发明了滴灌技术。", "官方语言是希伯来语和阿拉伯语。"]
-  },
-  { 
-    code: 'IN', name: 'India', nameZh: '印度', emoji: '🇮🇳',
-    funFacts: ["Invented Chess and Yoga.", "Largest democracy.", "Cows are sacred."],
-    funFactsZh: ["发明了国际象棋和瑜伽。", "最大的民主国家。", "牛是神圣的。"]
-  },
-  { 
-    code: 'IQ', name: 'Iraq', nameZh: '伊拉克', emoji: '🇮🇶',
-    funFacts: ["Cradle of Civilization.", "Writing invented here (Sumer).", "Date palms are everywhere."],
-    funFactsZh: ["文明的摇篮。", "文字在此发明（苏美尔）。", "到处都是枣椰树。"]
-  },
-  { 
-    code: 'IR', name: 'Iran', nameZh: '伊朗', emoji: '🇮🇷',
-    funFacts: ["Famous for Persian rugs.", "Tehran is the capital.", "New Year is called Nowruz."],
-    funFactsZh: ["以波斯地毯闻名。", "首都是德黑兰。", "新年叫诺鲁兹。"]
-  },
-  { 
-    code: 'IS', name: 'Iceland', nameZh: '冰岛', emoji: '🇮🇸',
-    funFacts: ["No mosquitoes.", "Powered by geothermal energy.", "People believe in elves."],
-    funFactsZh: ["没有蚊子。", "使用地热能。", "人们相信精灵。"]
-  },
-  { 
-    code: 'IT', name: 'Italy', nameZh: '意大利', emoji: '🇮🇹',
-    funFacts: ["Most UNESCO sites.", "Invented pizza.", "There is a wine fountain."],
-    funFactsZh: ["世界遗产最多。", "发明了披萨。", "有一个喷酒的喷泉。"]
-  },
-  { 
-    code: 'JM', name: 'Jamaica', nameZh: '牙买加', emoji: '🇯🇲',
-    funFacts: ["Birthplace of Reggae.", "Fastest sprinters.", "James Bond novels written here."],
-    funFactsZh: ["雷鬼音乐发源地。", "拥有最快的短跑运动员。", "007小说在此写成。"]
-  },
-  { 
-    code: 'JO', name: 'Jordan', nameZh: '约旦', emoji: '🇯🇴',
-    funFacts: ["Home to Petra.", "Dead Sea is floating magic.", "Olive trees are ancient."],
-    funFactsZh: ["佩特拉古城所在地。", "死海漂浮很神奇。", "橄榄树非常古老。"]
-  },
-  { 
-    code: 'JP', name: 'Japan', nameZh: '日本', emoji: '🇯🇵',
-    funFacts: ["Has highest life expectancy.", "Vending machines everywhere.", "Square watermelons exist."],
-    funFactsZh: ["人均寿命最高。", "自动售货机随处可见。", "有方形西瓜。"]
-  },
-  { 
-    code: 'KE', name: 'Kenya', nameZh: '肯尼亚', emoji: '🇰🇪',
-    funFacts: ["Famous for Safari.", "Runners are world class.", "Coffee is a main export."],
-    funFactsZh: ["以狩猎旅行闻名。", "跑步运动员世界一流。", "咖啡是主要出口品。"]
-  },
-  { 
-    code: 'KG', name: 'Kyrgyzstan', nameZh: '吉尔吉斯斯坦', emoji: '🇰🇬',
-    funFacts: ["Mountains cover 80%.", "Epic of Manas is longest poem.", "Nomadic culture survives."],
-    funFactsZh: ["山地覆盖80%。", "玛纳斯史诗是最长的诗。", "游牧文化尚存。"]
-  },
-  { 
-    code: 'KH', name: 'Cambodia', nameZh: '柬埔寨', emoji: '🇰🇭',
-    funFacts: ["Home to Angkor Wat.", "New Year is in April.", "Flag features a building."],
-    funFactsZh: ["吴哥窟所在地。", "四月过新年。", "国旗上有建筑物。"]
-  },
-  { 
-    code: 'KR', name: 'South Korea', nameZh: '韩国', emoji: '🇰🇷',
-    funFacts: ["Kimchi is life.", "Fastest internet speeds.", "K-Pop originated here."],
-    funFactsZh: ["泡菜是生活必需。", "网速最快。", "K-Pop起源于此。"]
-  },
-  { 
-    code: 'KW', name: 'Kuwait', nameZh: '科威特', emoji: '🇰🇼',
+  {
+    code: "AD",
+    name: "Andorra",
+    nameZh: "安道尔",
+    emoji: "🇦🇩",
+    funFacts: [
+      "It has no airport.",
+      "The official language is Catalan.",
+      "It is ruled by two princes.",
+    ],
+    funFactsZh: [
+      "它没有机场。",
+      "官方语言是加泰罗尼亚语。",
+      "它由两位大公共同统治。",
+    ],
+  },
+  {
+    code: "AE",
+    name: "United Arab Emirates",
+    nameZh: "阿联酋",
+    emoji: "🇦🇪",
+    funFacts: [
+      "Home to the world's tallest building.",
+      "It has a minister for AI.",
+      "Falconry is a popular sport.",
+    ],
+    funFactsZh: [
+      "拥有世界最高的建筑。",
+      "它有专门的AI部长。",
+      "猎鹰是一项流行的运动。",
+    ],
+  },
+  {
+    code: "AF",
+    name: "Afghanistan",
+    nameZh: "阿富汗",
+    emoji: "🇦🇫",
+    funFacts: [
+      "Poetry is a big part of culture.",
+      "New Year is celebrated in March.",
+      "The national game is Buzkashi.",
+    ],
+    funFactsZh: [
+      "诗歌是文化的重要组成部分。",
+      "新年在三月庆祝。",
+      "国球是马背刁羊。",
+    ],
+  },
+  {
+    code: "AG",
+    name: "Antigua & Barbuda",
+    nameZh: "安提瓜和巴布达",
+    emoji: "🇦🇬",
+    funFacts: [
+      "It has 365 beaches.",
+      "Home to a famous sailing week.",
+      "Cricket is the national sport.",
+    ],
+    funFactsZh: ["它有365个海滩。", "举办著名的帆船周。", "板球是国球。"],
+  },
+  {
+    code: "AL",
+    name: "Albania",
+    nameZh: "阿尔巴尼亚",
+    emoji: "🇦🇱",
+    funFacts: [
+      "It has over 170,000 bunkers.",
+      "Nodding means 'no' here.",
+      "Mother Teresa had Albanian roots.",
+    ],
+    funFactsZh: [
+      "它有超过17万个碉堡。",
+      "这里点头表示'不'。",
+      "特蕾莎修女有阿尔巴尼亚血统。",
+    ],
+  },
+  {
+    code: "AM",
+    name: "Armenia",
+    nameZh: "亚美尼亚",
+    emoji: "🇦🇲",
+    funFacts: [
+      "Chess is a compulsory subject.",
+      "First country to adopt Christianity.",
+      "Mt Ararat is a national symbol.",
+    ],
+    funFactsZh: [
+      "国际象棋是必修课。",
+      "第一个将基督教定为国教的国家。",
+      "亚拉拉特山是国家象征。",
+    ],
+  },
+  {
+    code: "AO",
+    name: "Angola",
+    nameZh: "安哥拉",
+    emoji: "🇦🇴",
+    funFacts: [
+      "Its flag features a machete.",
+      "Kizomba music originated here.",
+      "It has a very young population.",
+    ],
+    funFactsZh: [
+      "国旗上有砍刀图案。",
+      "Kizomba音乐起源于此。",
+      "它的人口非常年轻。",
+    ],
+  },
+  {
+    code: "AR",
+    name: "Argentina",
+    nameZh: "阿根廷",
+    emoji: "🇦🇷",
+    funFacts: [
+      "Birthplace of the Tango.",
+      "Name comes from 'Silver'.",
+      "They eat the most beef per capita.",
+    ],
+    funFactsZh: ["探戈的发源地。", "名字来源于'银'。", "人均牛肉消费量最高。"],
+  },
+  {
+    code: "AT",
+    name: "Austria",
+    nameZh: "奥地利",
+    emoji: "🇦🇹",
+    funFacts: [
+      "Home of Mozart and Schubert.",
+      "Famous for Weiner Schnitzel.",
+      "About 62% is covered by Alps.",
+    ],
+    funFactsZh: [
+      "莫扎特和舒伯特的故乡。",
+      "以维也纳炸肉排闻名。",
+      "约62%被阿尔卑斯山覆盖。",
+    ],
+  },
+  {
+    code: "AU",
+    name: "Australia",
+    nameZh: "澳大利亚",
+    emoji: "🇦🇺",
+    funFacts: [
+      "Home to the Great Barrier Reef.",
+      "Kangaroos outnumber humans.",
+      "It is a country and a continent.",
+    ],
+    funFactsZh: [
+      "大堡礁的所在地。",
+      "袋鼠数量超过人类。",
+      "它既是国家也是大陆。",
+    ],
+  },
+  {
+    code: "AZ",
+    name: "Azerbaijan",
+    nameZh: "阿塞拜疆",
+    emoji: "🇦🇿",
+    funFacts: [
+      "Known as the Land of Fire.",
+      "They love drinking tea with jam.",
+      "Baku is the City of Winds.",
+    ],
+    funFactsZh: ["被称为'火之国'。", "喜欢喝茶配果酱。", "巴库是'风之城'。"],
+  },
+  {
+    code: "BA",
+    name: "Bosnia & Herzegovina",
+    nameZh: "波黑",
+    emoji: "🇧🇦",
+    funFacts: [
+      "Sarajevo hosted the 1984 Winter Olympics.",
+      "It has one of the last jungles in Europe.",
+      "Coffee is a daily ritual.",
+    ],
+    funFactsZh: [
+      "萨拉热窝举办了1984年冬奥会。",
+      "拥有欧洲仅存的丛林之一。",
+      "喝咖啡是日常仪式。",
+    ],
+  },
+  {
+    code: "BB",
+    name: "Barbados",
+    nameZh: "巴巴多斯",
+    emoji: "🇧🇧",
+    funFacts: [
+      "Birthplace of Rihanna.",
+      "It is the birthplace of Rum.",
+      "They have flying fish.",
+    ],
+    funFactsZh: ["蕾哈娜的出生地。", "朗姆酒的发源地。", "这里有飞鱼。"],
+  },
+  {
+    code: "BD",
+    name: "Bangladesh",
+    nameZh: "孟加拉国",
+    emoji: "🇧🇩",
+    funFacts: [
+      "Home to the Royal Bengal Tiger.",
+      "It has 6 seasons, not 4.",
+      "Cricket is extremely popular.",
+    ],
+    funFactsZh: [
+      "孟加拉虎的家乡。",
+      "它有6个季节，不是4个。",
+      "板球非常受欢迎。",
+    ],
+  },
+  {
+    code: "BE",
+    name: "Belgium",
+    nameZh: "比利时",
+    emoji: "🇧🇪",
+    funFacts: [
+      "Famous for chocolate and waffles.",
+      "They invented French Fries.",
+      "Home to the EU headquarters.",
+    ],
+    funFactsZh: [
+      "以巧克力和华夫饼闻名。",
+      "他们发明了炸薯条。",
+      "欧盟总部所在地。",
+    ],
+  },
+  {
+    code: "BG",
+    name: "Bulgaria",
+    nameZh: "保加利亚",
+    emoji: "🇧🇬",
+    funFacts: [
+      "Produces 70% of the world's rose oil.",
+      "Nodding means 'No' here.",
+      "They use the Cyrillic alphabet.",
+    ],
+    funFactsZh: ["生产全球70%的玫瑰油。", "点头表示'不'。", "使用西里尔字母。"],
+  },
+  {
+    code: "BH",
+    name: "Bahrain",
+    nameZh: "巴林",
+    emoji: "🇧🇭",
+    funFacts: [
+      "Home to the Tree of Life.",
+      "It is an archipelago of 33 islands.",
+      "Pearl diving was huge here.",
+    ],
+    funFactsZh: [
+      "生命之树的所在地。",
+      "由33个岛屿组成的群岛。",
+      "采珠业曾非常兴盛。",
+    ],
+  },
+  {
+    code: "BI",
+    name: "Burundi",
+    nameZh: "布隆迪",
+    emoji: "🇧🇮",
+    funFacts: [
+      "Jogging in groups was banned.",
+      "Gustave the crocodile is a legend.",
+      "It is the heart of Africa.",
+    ],
+    funFactsZh: [
+      "曾禁止集体慢跑。",
+      "鳄鱼古斯塔夫是个传说。",
+      "它是非洲的心脏。",
+    ],
+  },
+  {
+    code: "BJ",
+    name: "Benin",
+    nameZh: "贝宁",
+    emoji: "🇧🇯",
+    funFacts: [
+      "Birthplace of Voodoo.",
+      "Home to the 'Venice of Africa'.",
+      "Snakes are revered here.",
+    ],
+    funFactsZh: ["伏都教的发源地。", "拥有'非洲威尼斯'。", "这里尊崇蛇。"],
+  },
+  {
+    code: "BO",
+    name: "Bolivia",
+    nameZh: "玻利维亚",
+    emoji: "🇧🇴",
+    funFacts: [
+      "Home to the largest salt flat.",
+      "It has two capitals.",
+      "Named after Simon Bolivar.",
+    ],
+    funFactsZh: ["拥有最大的盐沼。", "它有两个首都。", "以西蒙·玻利瓦尔命名。"],
+  },
+  {
+    code: "BR",
+    name: "Brazil",
+    nameZh: "巴西",
+    emoji: "🇧🇷",
+    funFacts: [
+      "Largest coffee producer.",
+      "Home to the Amazon Rainforest.",
+      "They speak Portuguese.",
+    ],
+    funFactsZh: [
+      "最大的咖啡生产国。",
+      "亚马逊雨林的所在地。",
+      "他们说葡萄牙语。",
+    ],
+  },
+  {
+    code: "BS",
+    name: "Bahamas",
+    nameZh: "巴哈马",
+    emoji: "🇧🇸",
+    funFacts: [
+      "It has swimming pigs.",
+      "Home to the deepest blue hole.",
+      "Once a haven for pirates.",
+    ],
+    funFactsZh: [
+      "这里有会游泳的猪。",
+      "拥有最深的蓝洞。",
+      "曾经是海盗的天堂。",
+    ],
+  },
+  {
+    code: "BT",
+    name: "Bhutan",
+    nameZh: "不丹",
+    emoji: "🇧🇹",
+    funFacts: [
+      "Measures Gross National Happiness.",
+      "Plastic bags are banned.",
+      "No traffic lights in the capital.",
+    ],
+    funFactsZh: ["衡量国民幸福总值。", "禁止使用塑料袋。", "首都全无红绿灯。"],
+  },
+  {
+    code: "BW",
+    name: "Botswana",
+    nameZh: "博茨瓦纳",
+    emoji: "🇧🇼",
+    funFacts: [
+      "Home to the world's largest elephant population.",
+      "The Okavango Delta is here.",
+      "Diamonds are a main export.",
+    ],
+    funFactsZh: [
+      "拥有世界最大的大象种群。",
+      "奥卡万戈三角洲在此。",
+      "钻石是主要出口产品。",
+    ],
+  },
+  {
+    code: "BY",
+    name: "Belarus",
+    nameZh: "白俄罗斯",
+    emoji: "🇧🇾",
+    funFacts: [
+      "40% is covered by forests.",
+      "Potatoes are a staple food.",
+      "Home to European Bison.",
+    ],
+    funFactsZh: ["40%被森林覆盖。", "土豆是主食。", "欧洲野牛的家园。"],
+  },
+  {
+    code: "BZ",
+    name: "Belize",
+    nameZh: "伯利兹",
+    emoji: "🇧🇿",
+    funFacts: [
+      "The only English speaking country in Central America.",
+      "Home to the Great Blue Hole.",
+      "Jaguar sanctuary exists here.",
+    ],
+    funFactsZh: [
+      "中美洲唯一的英语国家。",
+      "大蓝洞所在地。",
+      "这里有美洲虎保护区。",
+    ],
+  },
+  {
+    code: "CA",
+    name: "Canada",
+    nameZh: "加拿大",
+    emoji: "🇨🇦",
+    funFacts: [
+      "Has the longest coastline.",
+      "More lakes than the rest of the world combined.",
+      "Maple syrup capital.",
+    ],
+    funFactsZh: [
+      "拥有最长的海岸线。",
+      "湖泊数量超过世界其他地区总和。",
+      "枫糖浆之都。",
+    ],
+  },
+  {
+    code: "CD",
+    name: "Congo (DRC)",
+    nameZh: "刚果（金）",
+    emoji: "🇨🇩",
+    funFacts: [
+      "Second largest country in Africa.",
+      "Rich in minerals like Cobalt.",
+      "Home to Bonobo apes.",
+    ],
+    funFactsZh: ["非洲第二大国。", "富含钴等矿产。", "倭黑猩猩的家园。"],
+  },
+  {
+    code: "CF",
+    name: "Central African Republic",
+    nameZh: "中非共和国",
+    emoji: "🇨🇫",
+    funFacts: [
+      "Located in the exact center of Africa.",
+      "Rich in diamonds and gold.",
+      "Home to forest elephants.",
+    ],
+    funFactsZh: ["位于非洲正中心。", "盛产钻石和黄金。", "森林象的家园。"],
+  },
+  {
+    code: "CG",
+    name: "Congo (Republic)",
+    nameZh: "刚果（布）",
+    emoji: "🇨🇬",
+    funFacts: [
+      "Brazzaville is across the river from Kinshasa.",
+      "Known for Sapeurs fashion.",
+      "Deep rain forests.",
+    ],
+    funFactsZh: [
+      "首都与金沙萨隔河相望。",
+      "以萨普尔时尚闻名。",
+      "拥有茂密的雨林。",
+    ],
+  },
+  {
+    code: "CH",
+    name: "Switzerland",
+    nameZh: "瑞士",
+    emoji: "🇨🇭",
+    funFacts: [
+      "Has 4 official languages.",
+      "Famous for watches and chocolate.",
+      "It has nuclear bunkers for everyone.",
+    ],
+    funFactsZh: [
+      "有4种官方语言。",
+      "以手表和巧克力闻名。",
+      "为每个人都准备了核掩体。",
+    ],
+  },
+  {
+    code: "CI",
+    name: "Côte d’Ivoire",
+    nameZh: "科特迪瓦",
+    emoji: "🇨🇮",
+    funFacts: [
+      "World's largest cocoa producer.",
+      "Home to the biggest church in the world.",
+      "Name means Ivory Coast.",
+    ],
+    funFactsZh: [
+      "世界最大可可生产国。",
+      "拥有世界上最大的教堂。",
+      "名字意为象牙海岸。",
+    ],
+  },
+  {
+    code: "CL",
+    name: "Chile",
+    nameZh: "智利",
+    emoji: "🇨🇱",
+    funFacts: [
+      "Longest country in the world.",
+      "Home to the Atacama Desert.",
+      "They have penguins.",
+    ],
+    funFactsZh: [
+      "世界上最狭长的国家。",
+      "阿塔卡马沙漠所在地。",
+      "那里有企鹅。",
+    ],
+  },
+  {
+    code: "CM",
+    name: "Cameroon",
+    nameZh: "喀麦隆",
+    emoji: "🇨🇲",
+    funFacts: [
+      "Known as 'Africa in miniature'.",
+      "Famous for its football team.",
+      "Has diverse landscapes.",
+    ],
+    funFactsZh: ["被称为'微缩非洲'。", "以足球队闻名。", "拥有多样的地貌。"],
+  },
+  {
+    code: "CN",
+    name: "China",
+    nameZh: "中国",
+    emoji: "🇨🇳",
+    funFacts: [
+      "Home to the Giant Panda.",
+      "Built the Great Wall.",
+      "Invented paper and gunpowder.",
+    ],
+    funFactsZh: ["大熊猫的故乡。", "建造了长城。", "发明了造纸术和火药。"],
+  },
+  {
+    code: "CO",
+    name: "Colombia",
+    nameZh: "哥伦比亚",
+    emoji: "🇨🇴",
+    funFacts: [
+      "Produces fine emeralds.",
+      "Famous for coffee.",
+      "Has the river of 5 colors.",
+    ],
+    funFactsZh: ["出产优质祖母绿。", "以咖啡闻名。", "拥有五色河。"],
+  },
+  {
+    code: "CR",
+    name: "Costa Rica",
+    nameZh: "哥斯达黎加",
+    emoji: "🇨🇷",
+    funFacts: [
+      "It has no army.",
+      "25% of the land is protected.",
+      "One of the happiest countries.",
+    ],
+    funFactsZh: ["它没有军队。", "25%的土地受保护。", "最幸福的国家之一。"],
+  },
+  {
+    code: "CU",
+    name: "Cuba",
+    nameZh: "古巴",
+    emoji: "🇨🇺",
+    funFacts: [
+      "Famous for vintage cars.",
+      "Home of Salsa music.",
+      "Cigars are iconic.",
+    ],
+    funFactsZh: ["以老爷车闻名。", "萨尔萨音乐之乡。", "雪茄是标志性的。"],
+  },
+  {
+    code: "CV",
+    name: "Cape Verde",
+    nameZh: "佛得角",
+    emoji: "🇨🇻",
+    funFacts: [
+      "It is an island nation.",
+      "Famous for Morna music.",
+      "Was uninhabited until the 15th century.",
+    ],
+    funFactsZh: ["它是一个岛国。", "以莫尔纳音乐闻名。", "15世纪前无人居住。"],
+  },
+  {
+    code: "CY",
+    name: "Cyprus",
+    nameZh: "塞浦路斯",
+    emoji: "🇨🇾",
+    funFacts: [
+      "Legendary birthplace of Aphrodite.",
+      "Cats outnumber humans.",
+      "Capital city is divided.",
+    ],
+    funFactsZh: ["阿佛洛狄忒的传说诞生地。", "猫比人多。", "首都是分裂的。"],
+  },
+  {
+    code: "CZ",
+    name: "Czechia",
+    nameZh: "捷克",
+    emoji: "🇨🇿",
+    funFacts: [
+      "Invented the contact lens.",
+      "Drink the most beer per capita.",
+      "Prague is the City of Spires.",
+    ],
+    funFactsZh: [
+      "发明了隐形眼镜。",
+      "人均啤酒消费量最高。",
+      "布拉格是千塔之城。",
+    ],
+  },
+  {
+    code: "DE",
+    name: "Germany",
+    nameZh: "德国",
+    emoji: "🇩🇪",
+    funFacts: [
+      "There are over 1,000 kinds of sausages.",
+      "Oktoberfest is huge.",
+      "Highways have no speed limit.",
+    ],
+    funFactsZh: [
+      "有超过1000种香肠。",
+      "慕尼黑啤酒节很盛大。",
+      "高速公路不限速。",
+    ],
+  },
+  {
+    code: "DJ",
+    name: "Djibouti",
+    nameZh: "吉布提",
+    emoji: "🇩🇯",
+    funFacts: [
+      "Located at the Red Sea entrance.",
+      "Lake Assal is super salty.",
+      "Known as a land of geological marvels.",
+    ],
+    funFactsZh: ["位于红海入口。", "阿萨勒湖非常咸。", "被称为地质奇迹之地。"],
+  },
+  {
+    code: "DK",
+    name: "Denmark",
+    nameZh: "丹麦",
+    emoji: "🇩🇰",
+    funFacts: [
+      "Home of Lego.",
+      "Happiest country in the world usually.",
+      "They love cycling.",
+    ],
+    funFactsZh: [
+      "乐高的故乡。",
+      "通常是世界上最幸福的国家。",
+      "他们热爱骑行。",
+    ],
+  },
+  {
+    code: "DM",
+    name: "Dominica",
+    nameZh: "多米尼克",
+    emoji: "🇩🇲",
+    funFacts: [
+      "Known as the Nature Island.",
+      "Has a boiling lake.",
+      "Last home of the Carib people.",
+    ],
+    funFactsZh: ["被称为自然之岛。", "有一个沸腾湖。", "加勒比人的最后家园。"],
+  },
+  {
+    code: "DO",
+    name: "Dominican Republic",
+    nameZh: "多米尼加",
+    emoji: "🇩🇴",
+    funFacts: [
+      "Home to the Caribbean's highest peak.",
+      "Baseball is the favorite sport.",
+      "Merengue dance started here.",
+    ],
+    funFactsZh: [
+      "加勒比最高峰所在地。",
+      "棒球是最爱的运动。",
+      "梅伦格舞起源于此。",
+    ],
+  },
+  {
+    code: "DZ",
+    name: "Algeria",
+    nameZh: "阿尔及利亚",
+    emoji: "🇩🇿",
+    funFacts: [
+      "Largest country in Africa.",
+      "Sahara covers 80% of it.",
+      "Fennec fox is the national animal.",
+    ],
+    funFactsZh: ["非洲最大的国家。", "撒哈拉覆盖了80%。", "耳廓狐是国兽。"],
+  },
+  {
+    code: "EC",
+    name: "Ecuador",
+    nameZh: "厄瓜多尔",
+    emoji: "🇪🇨",
+    funFacts: [
+      "Named after the Equator.",
+      "Galapagos Islands are here.",
+      "Uses the US Dollar.",
+    ],
+    funFactsZh: ["以赤道命名。", "加拉帕戈斯群岛在此。", "使用美元。"],
+  },
+  {
+    code: "EE",
+    name: "Estonia",
+    nameZh: "爱沙尼亚",
+    emoji: "🇪🇪",
+    funFacts: [
+      "Birthplace of Skype.",
+      "Internet is a human right.",
+      "Has over 2000 islands.",
+    ],
+    funFactsZh: ["Skype的诞生地。", "上网是人权。", "拥有超过2000个岛屿。"],
+  },
+  {
+    code: "EG",
+    name: "Egypt",
+    nameZh: "埃及",
+    emoji: "🇪🇬",
+    funFacts: [
+      "Home to the Pyramids.",
+      "The Nile is the longest river.",
+      "Invented the 365-day calendar.",
+    ],
+    funFactsZh: [
+      "金字塔的所在地。",
+      "尼罗河是最长的河流。",
+      "发明了365天日历。",
+    ],
+  },
+  {
+    code: "ES",
+    name: "Spain",
+    nameZh: "西班牙",
+    emoji: "🇪🇸",
+    funFacts: [
+      "Produces almost half the world's olive oil.",
+      "La Tomatina festival is messy.",
+      "Siesta is famous.",
+    ],
+    funFactsZh: [
+      "生产全球近一半橄榄油。",
+      "番茄大战很混乱。",
+      "午睡习俗闻名。",
+    ],
+  },
+  {
+    code: "ET",
+    name: "Ethiopia",
+    nameZh: "埃塞俄比亚",
+    emoji: "🇪🇹",
+    funFacts: [
+      "Coffee originated here.",
+      "Has its own calendar (7 years behind).",
+      "Never colonized.",
+    ],
+    funFactsZh: ["咖啡起源于此。", "有自己的日历（慢7年）。", "从未被殖民。"],
+  },
+  {
+    code: "FI",
+    name: "Finland",
+    nameZh: "芬兰",
+    emoji: "🇫🇮",
+    funFacts: [
+      "More saunas than cars.",
+      "Home of Santa Claus village.",
+      "Highest coffee consumption.",
+    ],
+    funFactsZh: ["桑拿房比汽车多。", "圣诞老人村所在地。", "咖啡消费量最高。"],
+  },
+  {
+    code: "FJ",
+    name: "Fiji",
+    nameZh: "斐济",
+    emoji: "🇫🇯",
+    funFacts: [
+      "Composed of 333 islands.",
+      "Fire walking originated here.",
+      "Rugby is huge.",
+    ],
+    funFactsZh: ["由333个岛屿组成。", "踏火仪式起源于此。", "橄榄球非常盛行。"],
+  },
+  {
+    code: "FR",
+    name: "France",
+    nameZh: "法国",
+    emoji: "🇫🇷",
+    funFacts: [
+      "Most visited country.",
+      "Invented cinema.",
+      "Has 12 time zones.",
+    ],
+    funFactsZh: ["访问量最大的国家。", "发明了电影。", "拥有12个时区。"],
+  },
+  {
+    code: "GA",
+    name: "Gabon",
+    nameZh: "加蓬",
+    emoji: "🇬🇦",
+    funFacts: [
+      "80% rainforest.",
+      "Home to surfing hippos.",
+      "Gorilla paradise.",
+    ],
+    funFactsZh: ["80%是雨林。", "冲浪河马的家园。", "大猩猩的天堂。"],
+  },
+  {
+    code: "GB",
+    name: "United Kingdom",
+    nameZh: "英国",
+    emoji: "🇬🇧",
+    funFacts: [
+      "Tea obsession is real.",
+      "Queen owns the swans.",
+      "London has over 170 museums.",
+    ],
+    funFactsZh: ["对茶非常痴迷。", "天鹅归女王所有。", "伦敦有170多个博物馆。"],
+  },
+  {
+    code: "GD",
+    name: "Grenada",
+    nameZh: "格林纳达",
+    emoji: "🇬🇩",
+    funFacts: [
+      "Known as the Spice Isle.",
+      "Famous for nutmeg.",
+      "Has an underwater sculpture park.",
+    ],
+    funFactsZh: ["被称为香料之岛。", "以肉豆蔻闻名。", "拥有水下雕塑公园。"],
+  },
+  {
+    code: "GE",
+    name: "Georgia",
+    nameZh: "格鲁吉亚",
+    emoji: "🇬🇪",
+    funFacts: [
+      "Birthplace of wine.",
+      "Has its own unique alphabet.",
+      "Very hospitable culture.",
+    ],
+    funFactsZh: ["葡萄酒的发源地。", "拥有独特的字母表。", "非常好客的文化。"],
+  },
+  {
+    code: "GH",
+    name: "Ghana",
+    nameZh: "加纳",
+    emoji: "🇬🇭",
+    funFacts: [
+      "Name means 'Warrior King'.",
+      "Lake Volta is man-made.",
+      "Famous for Kente cloth.",
+    ],
+    funFactsZh: [
+      "名字意为'勇士之王'。",
+      "沃尔特湖是人造的。",
+      "以肯特布闻名。",
+    ],
+  },
+  {
+    code: "GM",
+    name: "Gambia",
+    nameZh: "冈比亚",
+    emoji: "🇬🇲",
+    funFacts: [
+      "Smallest country in mainland Africa.",
+      "Named after the river.",
+      "Known for birdwatching.",
+    ],
+    funFactsZh: ["非洲大陆最小的国家。", "以河流命名。", "以观鸟闻名。"],
+  },
+  {
+    code: "GN",
+    name: "Guinea",
+    nameZh: "几内亚",
+    emoji: "🇬🇳",
+    funFacts: [
+      "Source of the Niger river.",
+      "Rich in Bauxite.",
+      "Chimpanzees use tools here.",
+    ],
+    funFactsZh: [
+      "尼日尔河的源头。",
+      "富含铝土矿。",
+      "这里的黑猩猩会使用工具。",
+    ],
+  },
+  {
+    code: "GR",
+    name: "Greece",
+    nameZh: "希腊",
+    emoji: "🇬🇷",
+    funFacts: [
+      "Birthplace of democracy.",
+      "Has thousands of islands.",
+      "Olympics started here.",
+    ],
+    funFactsZh: ["民主的发源地。", "拥有数千个岛屿。", "奥林匹克起源于此。"],
+  },
+  {
+    code: "GT",
+    name: "Guatemala",
+    nameZh: "危地马拉",
+    emoji: "🇬🇹",
+    funFacts: [
+      "Heart of the Mayan world.",
+      "Instant coffee invented here.",
+      "Chocolate originated here.",
+    ],
+    funFactsZh: ["玛雅世界的中心。", "速溶咖啡在此发明。", "巧克力起源于此。"],
+  },
+  {
+    code: "GY",
+    name: "Guyana",
+    nameZh: "圭亚那",
+    emoji: "🇬🇾",
+    funFacts: [
+      "Only English speaking country in South America.",
+      "Home to Kaieteur Falls.",
+      "Land of Many Waters.",
+    ],
+    funFactsZh: ["南美唯一英语国家。", "凯厄图尔瀑布所在地。", "多水之国。"],
+  },
+  {
+    code: "HN",
+    name: "Honduras",
+    nameZh: "洪都拉斯",
+    emoji: "🇭🇳",
+    funFacts: [
+      "Known for banana exports.",
+      "Has Mayan ruins at Copan.",
+      "Rain of fish legend.",
+    ],
+    funFactsZh: ["以香蕉出口闻名。", "科潘有玛雅遗址。", "有鱼雨的传说。"],
+  },
+  {
+    code: "HR",
+    name: "Croatia",
+    nameZh: "克罗地亚",
+    emoji: "🇭🇷",
+    funFacts: [
+      "Invented the necktie.",
+      "Game of Thrones filmed here.",
+      "Dalmatian dogs originated here.",
+    ],
+    funFactsZh: [
+      "发明了领带。",
+      "《权力的游戏》在此取景。",
+      "斑点狗起源于此。",
+    ],
+  },
+  {
+    code: "HT",
+    name: "Haiti",
+    nameZh: "海地",
+    emoji: "🇭🇹",
+    funFacts: [
+      "First black republic.",
+      "Voodoo is an official religion.",
+      "Share island with Dominican Republic.",
+    ],
+    funFactsZh: [
+      "第一个黑人共和国。",
+      "伏都教是官方宗教。",
+      "与多米尼加共享岛屿。",
+    ],
+  },
+  {
+    code: "HU",
+    name: "Hungary",
+    nameZh: "匈牙利",
+    emoji: "🇭🇺",
+    funFacts: [
+      "Invented the Rubik's cube.",
+      "Capital of thermal baths.",
+      "Paprika is the main spice.",
+    ],
+    funFactsZh: ["发明了魔方。", "温泉浴之都。", "红辣椒是主要香料。"],
+  },
+  {
+    code: "ID",
+    name: "Indonesia",
+    nameZh: "印度尼西亚",
+    emoji: "🇮🇩",
+    funFacts: [
+      "Largest archipelago in the world.",
+      "Home to Komodo Dragons.",
+      "Over 700 languages.",
+    ],
+    funFactsZh: ["世界最大群岛国家。", "科莫多龙的家园。", "超过700种语言。"],
+  },
+  {
+    code: "IE",
+    name: "Ireland",
+    nameZh: "爱尔兰",
+    emoji: "🇮🇪",
+    funFacts: [
+      "St. Patrick wasn't Irish.",
+      "Halloween originated here.",
+      "No snakes exist here.",
+    ],
+    funFactsZh: [
+      "圣帕特里克不是爱尔兰人。",
+      "万圣节起源于此。",
+      "这里没有蛇。",
+    ],
+  },
+  {
+    code: "IL",
+    name: "Israel",
+    nameZh: "以色列",
+    emoji: "🇮🇱",
+    funFacts: [
+      "Lowest point on earth (Dead Sea).",
+      "Drip irrigation invented here.",
+      "Official languages Hebrew & Arabic.",
+    ],
+    funFactsZh: [
+      "地球最低点（死海）。",
+      "发明了滴灌技术。",
+      "官方语言是希伯来语和阿拉伯语。",
+    ],
+  },
+  {
+    code: "IN",
+    name: "India",
+    nameZh: "印度",
+    emoji: "🇮🇳",
+    funFacts: [
+      "Invented Chess and Yoga.",
+      "Largest democracy.",
+      "Cows are sacred.",
+    ],
+    funFactsZh: ["发明了国际象棋和瑜伽。", "最大的民主国家。", "牛是神圣的。"],
+  },
+  {
+    code: "IQ",
+    name: "Iraq",
+    nameZh: "伊拉克",
+    emoji: "🇮🇶",
+    funFacts: [
+      "Cradle of Civilization.",
+      "Writing invented here (Sumer).",
+      "Date palms are everywhere.",
+    ],
+    funFactsZh: [
+      "文明的摇篮。",
+      "文字在此发明（苏美尔）。",
+      "到处都是枣椰树。",
+    ],
+  },
+  {
+    code: "IR",
+    name: "Iran",
+    nameZh: "伊朗",
+    emoji: "🇮🇷",
+    funFacts: [
+      "Famous for Persian rugs.",
+      "Tehran is the capital.",
+      "New Year is called Nowruz.",
+    ],
+    funFactsZh: ["以波斯地毯闻名。", "首都是德黑兰。", "新年叫诺鲁兹。"],
+  },
+  {
+    code: "IS",
+    name: "Iceland",
+    nameZh: "冰岛",
+    emoji: "🇮🇸",
+    funFacts: [
+      "No mosquitoes.",
+      "Powered by geothermal energy.",
+      "People believe in elves.",
+    ],
+    funFactsZh: ["没有蚊子。", "使用地热能。", "人们相信精灵。"],
+  },
+  {
+    code: "IT",
+    name: "Italy",
+    nameZh: "意大利",
+    emoji: "🇮🇹",
+    funFacts: [
+      "Most UNESCO sites.",
+      "Invented pizza.",
+      "There is a wine fountain.",
+    ],
+    funFactsZh: ["世界遗产最多。", "发明了披萨。", "有一个喷酒的喷泉。"],
+  },
+  {
+    code: "JM",
+    name: "Jamaica",
+    nameZh: "牙买加",
+    emoji: "🇯🇲",
+    funFacts: [
+      "Birthplace of Reggae.",
+      "Fastest sprinters.",
+      "James Bond novels written here.",
+    ],
+    funFactsZh: [
+      "雷鬼音乐发源地。",
+      "拥有最快的短跑运动员。",
+      "007小说在此写成。",
+    ],
+  },
+  {
+    code: "JO",
+    name: "Jordan",
+    nameZh: "约旦",
+    emoji: "🇯🇴",
+    funFacts: [
+      "Home to Petra.",
+      "Dead Sea is floating magic.",
+      "Olive trees are ancient.",
+    ],
+    funFactsZh: ["佩特拉古城所在地。", "死海漂浮很神奇。", "橄榄树非常古老。"],
+  },
+  {
+    code: "JP",
+    name: "Japan",
+    nameZh: "日本",
+    emoji: "🇯🇵",
+    funFacts: [
+      "Has highest life expectancy.",
+      "Vending machines everywhere.",
+      "Square watermelons exist.",
+    ],
+    funFactsZh: ["人均寿命最高。", "自动售货机随处可见。", "有方形西瓜。"],
+  },
+  {
+    code: "KE",
+    name: "Kenya",
+    nameZh: "肯尼亚",
+    emoji: "🇰🇪",
+    funFacts: [
+      "Famous for Safari.",
+      "Runners are world class.",
+      "Coffee is a main export.",
+    ],
+    funFactsZh: [
+      "以狩猎旅行闻名。",
+      "跑步运动员世界一流。",
+      "咖啡是主要出口品。",
+    ],
+  },
+  {
+    code: "KG",
+    name: "Kyrgyzstan",
+    nameZh: "吉尔吉斯斯坦",
+    emoji: "🇰🇬",
+    funFacts: [
+      "Mountains cover 80%.",
+      "Epic of Manas is longest poem.",
+      "Nomadic culture survives.",
+    ],
+    funFactsZh: ["山地覆盖80%。", "玛纳斯史诗是最长的诗。", "游牧文化尚存。"],
+  },
+  {
+    code: "KH",
+    name: "Cambodia",
+    nameZh: "柬埔寨",
+    emoji: "🇰🇭",
+    funFacts: [
+      "Home to Angkor Wat.",
+      "New Year is in April.",
+      "Flag features a building.",
+    ],
+    funFactsZh: ["吴哥窟所在地。", "四月过新年。", "国旗上有建筑物。"],
+  },
+  {
+    code: "KR",
+    name: "South Korea",
+    nameZh: "韩国",
+    emoji: "🇰🇷",
+    funFacts: [
+      "Kimchi is life.",
+      "Fastest internet speeds.",
+      "K-Pop originated here.",
+    ],
+    funFactsZh: ["泡菜是生活必需。", "网速最快。", "K-Pop起源于此。"],
+  },
+  {
+    code: "KW",
+    name: "Kuwait",
+    nameZh: "科威特",
+    emoji: "🇰🇼",
     funFacts: ["No income tax.", "Oil rich nation.", "Hot desert climate."],
-    funFactsZh: ["没有所得税。", "石油资源丰富。", "炎热的沙漠气候。"]
+    funFactsZh: ["没有所得税。", "石油资源丰富。", "炎热的沙漠气候。"],
   },
-  { 
-    code: 'KZ', name: 'Kazakhstan', nameZh: '哈萨克斯坦', emoji: '🇰🇿',
-    funFacts: ["Largest landlocked country.", "Apples originated here.", "Horse milk is a drink."],
-    funFactsZh: ["最大的内陆国。", "苹果起源于此。", "马奶是一种饮料。"]
+  {
+    code: "KZ",
+    name: "Kazakhstan",
+    nameZh: "哈萨克斯坦",
+    emoji: "🇰🇿",
+    funFacts: [
+      "Largest landlocked country.",
+      "Apples originated here.",
+      "Horse milk is a drink.",
+    ],
+    funFactsZh: ["最大的内陆国。", "苹果起源于此。", "马奶是一种饮料。"],
   },
-  { 
-    code: 'LA', name: 'Laos', nameZh: '老挝', emoji: '🇱🇦',
-    funFacts: ["Land of a Million Elephants.", "Most bombed country per capita.", "Famous for sticky rice."],
-    funFactsZh: ["百万大象之国。", "人均被轰炸最多的国家。", "以糯米闻名。"]
+  {
+    code: "LA",
+    name: "Laos",
+    nameZh: "老挝",
+    emoji: "🇱🇦",
+    funFacts: [
+      "Land of a Million Elephants.",
+      "Most bombed country per capita.",
+      "Famous for sticky rice.",
+    ],
+    funFactsZh: ["百万大象之国。", "人均被轰炸最多的国家。", "以糯米闻名。"],
   },
-  { 
-    code: 'LB', name: 'Lebanon', nameZh: '黎巴嫩', emoji: '🇱🇧',
-    funFacts: ["Cedar tree is on flag.", "Byblos is oldest city.", "Great cuisine."],
-    funFactsZh: ["国旗上有雪松。", "比布鲁斯是最古老的城市。", "美食很棒。"]
+  {
+    code: "LB",
+    name: "Lebanon",
+    nameZh: "黎巴嫩",
+    emoji: "🇱🇧",
+    funFacts: [
+      "Cedar tree is on flag.",
+      "Byblos is oldest city.",
+      "Great cuisine.",
+    ],
+    funFactsZh: ["国旗上有雪松。", "比布鲁斯是最古老的城市。", "美食很棒。"],
   },
-  { 
-    code: 'LI', name: 'Liechtenstein', nameZh: '列支敦士登', emoji: '🇱🇮',
-    funFacts: ["Double landlocked.", "One of the smallest countries.", "False teeth capital."],
-    funFactsZh: ["双重内陆国。", "最小的国家之一。", "假牙之都。"]
+  {
+    code: "LI",
+    name: "Liechtenstein",
+    nameZh: "列支敦士登",
+    emoji: "🇱🇮",
+    funFacts: [
+      "Double landlocked.",
+      "One of the smallest countries.",
+      "False teeth capital.",
+    ],
+    funFactsZh: ["双重内陆国。", "最小的国家之一。", "假牙之都。"],
   },
-  { 
-    code: 'LK', name: 'Sri Lanka', nameZh: '斯里兰卡', emoji: '🇱🇰',
-    funFacts: ["Called Pearl of Indian Ocean.", "Famous for tea.", "Cinnamon originated here."],
-    funFactsZh: ["被称为印度洋明珠。", "以茶闻名。", "肉桂起源于此。"]
+  {
+    code: "LK",
+    name: "Sri Lanka",
+    nameZh: "斯里兰卡",
+    emoji: "🇱🇰",
+    funFacts: [
+      "Called Pearl of Indian Ocean.",
+      "Famous for tea.",
+      "Cinnamon originated here.",
+    ],
+    funFactsZh: ["被称为印度洋明珠。", "以茶闻名。", "肉桂起源于此。"],
   },
-  { 
-    code: 'LR', name: 'Liberia', nameZh: '利比里亚', emoji: '🇱🇷',
-    funFacts: ["Founded by freed slaves.", "First female president in Africa.", "Rubber is major export."],
-    funFactsZh: ["由获释奴隶建立。", "非洲第一位女总统。", "橡胶是主要出口品。"]
+  {
+    code: "LR",
+    name: "Liberia",
+    nameZh: "利比里亚",
+    emoji: "🇱🇷",
+    funFacts: [
+      "Founded by freed slaves.",
+      "First female president in Africa.",
+      "Rubber is major export.",
+    ],
+    funFactsZh: [
+      "由获释奴隶建立。",
+      "非洲第一位女总统。",
+      "橡胶是主要出口品。",
+    ],
   },
-  { 
-    code: 'LT', name: 'Lithuania', nameZh: '立陶宛', emoji: '🇱🇹',
-    funFacts: ["Basketball is a religion.", "Language is very old.", "Has a scent of the country."],
-    funFactsZh: ["篮球是信仰。", "语言非常古老。", "有国家专属香水。"]
+  {
+    code: "LT",
+    name: "Lithuania",
+    nameZh: "立陶宛",
+    emoji: "🇱🇹",
+    funFacts: [
+      "Basketball is a religion.",
+      "Language is very old.",
+      "Has a scent of the country.",
+    ],
+    funFactsZh: ["篮球是信仰。", "语言非常古老。", "有国家专属香水。"],
   },
-  { 
-    code: 'LU', name: 'Luxembourg', nameZh: '卢森堡', emoji: '🇱🇺',
-    funFacts: ["Free public transport.", "Only Grand Duchy.", "Very rich country."],
-    funFactsZh: ["公共交通免费。", "唯一的大公国。", "非常富有的国家。"]
+  {
+    code: "LU",
+    name: "Luxembourg",
+    nameZh: "卢森堡",
+    emoji: "🇱🇺",
+    funFacts: [
+      "Free public transport.",
+      "Only Grand Duchy.",
+      "Very rich country.",
+    ],
+    funFactsZh: ["公共交通免费。", "唯一的大公国。", "非常富有的国家。"],
   },
-  { 
-    code: 'LV', name: 'Latvia', nameZh: '拉脱维亚', emoji: '🇱🇻',
-    funFacts: ["Invented jeans (Levi Strauss).", "Lots of waterfalls.", "Tall women."],
-    funFactsZh: ["发明了牛仔裤(Levi Strauss)。", "有很多瀑布。", "女性个子高。"]
+  {
+    code: "LV",
+    name: "Latvia",
+    nameZh: "拉脱维亚",
+    emoji: "🇱🇻",
+    funFacts: [
+      "Invented jeans (Levi Strauss).",
+      "Lots of waterfalls.",
+      "Tall women.",
+    ],
+    funFactsZh: [
+      "发明了牛仔裤(Levi Strauss)。",
+      "有很多瀑布。",
+      "女性个子高。",
+    ],
   },
-  { 
-    code: 'LY', name: 'Libya', nameZh: '利比亚', emoji: '🇱🇾',
-    funFacts: ["90% desert.", "Has Roman ruins.", "Once had a plain green flag."],
-    funFactsZh: ["90%是沙漠。", "有罗马遗址。", "曾用纯绿旗。"]
+  {
+    code: "LY",
+    name: "Libya",
+    nameZh: "利比亚",
+    emoji: "🇱🇾",
+    funFacts: [
+      "90% desert.",
+      "Has Roman ruins.",
+      "Once had a plain green flag.",
+    ],
+    funFactsZh: ["90%是沙漠。", "有罗马遗址。", "曾用纯绿旗。"],
   },
-  { 
-    code: 'MA', name: 'Morocco', nameZh: '摩洛哥', emoji: '🇲🇦',
-    funFacts: ["Oldest university in the world.", "Famous for Argan oil.", "Blue city of Chefchaouen."],
-    funFactsZh: ["有世界上最古老的大学。", "以阿甘油闻名。", "蓝城舍夫沙万。"]
+  {
+    code: "MA",
+    name: "Morocco",
+    nameZh: "摩洛哥",
+    emoji: "🇲🇦",
+    funFacts: [
+      "Oldest university in the world.",
+      "Famous for Argan oil.",
+      "Blue city of Chefchaouen.",
+    ],
+    funFactsZh: ["有世界上最古老的大学。", "以阿甘油闻名。", "蓝城舍夫沙万。"],
   },
-  { 
-    code: 'MC', name: 'Monaco', nameZh: '摩纳哥', emoji: '🇲🇨',
-    funFacts: ["Second smallest country.", "Famous for casino.", "Grand Prix is huge."],
-    funFactsZh: ["第二小的国家。", "以赌场闻名。", "大奖赛很盛大。"]
+  {
+    code: "MC",
+    name: "Monaco",
+    nameZh: "摩纳哥",
+    emoji: "🇲🇨",
+    funFacts: [
+      "Second smallest country.",
+      "Famous for casino.",
+      "Grand Prix is huge.",
+    ],
+    funFactsZh: ["第二小的国家。", "以赌场闻名。", "大奖赛很盛大。"],
   },
-  { 
-    code: 'MD', name: 'Moldova', nameZh: '摩尔多瓦', emoji: '🇲🇩',
-    funFacts: ["Largest wine cellar.", "Least visited in Europe.", "Rich folk traditions."],
-    funFactsZh: ["最大的酒窖。", "欧洲游客最少的国家。", "丰富的民间传统。"]
+  {
+    code: "MD",
+    name: "Moldova",
+    nameZh: "摩尔多瓦",
+    emoji: "🇲🇩",
+    funFacts: [
+      "Largest wine cellar.",
+      "Least visited in Europe.",
+      "Rich folk traditions.",
+    ],
+    funFactsZh: ["最大的酒窖。", "欧洲游客最少的国家。", "丰富的民间传统。"],
   },
-  { 
-    code: 'ME', name: 'Montenegro', nameZh: '黑山', emoji: '🇲🇪',
-    funFacts: ["Name means Black Mountain.", "Young country (2006).", "Stunning coast."],
-    funFactsZh: ["名字意为黑山。", "年轻的国家(2006)。", "迷人的海岸。"]
+  {
+    code: "ME",
+    name: "Montenegro",
+    nameZh: "黑山",
+    emoji: "🇲🇪",
+    funFacts: [
+      "Name means Black Mountain.",
+      "Young country (2006).",
+      "Stunning coast.",
+    ],
+    funFactsZh: ["名字意为黑山。", "年轻的国家(2006)。", "迷人的海岸。"],
   },
-  { 
-    code: 'MG', name: 'Madagascar', nameZh: '马达加斯加', emoji: '🇲🇬',
-    funFacts: ["Home to Lemurs.", "Baobab trees are iconic.", "4th largest island."],
-    funFactsZh: ["狐猴的家园。", "猴面包树是标志性的。", "第四大岛。"]
+  {
+    code: "MG",
+    name: "Madagascar",
+    nameZh: "马达加斯加",
+    emoji: "🇲🇬",
+    funFacts: [
+      "Home to Lemurs.",
+      "Baobab trees are iconic.",
+      "4th largest island.",
+    ],
+    funFactsZh: ["狐猴的家园。", "猴面包树是标志性的。", "第四大岛。"],
   },
-  { 
-    code: 'MK', name: 'North Macedonia', nameZh: '北马其顿', emoji: '🇲🇰',
-    funFacts: ["Birthplace of Mother Teresa.", "Lake Ohrid is ancient.", "Famous for Ajvar."],
-    funFactsZh: ["特蕾莎修女出生地。", "奥赫里德湖很古老。", "以Ajvar酱闻名。"]
+  {
+    code: "MK",
+    name: "North Macedonia",
+    nameZh: "北马其顿",
+    emoji: "🇲🇰",
+    funFacts: [
+      "Birthplace of Mother Teresa.",
+      "Lake Ohrid is ancient.",
+      "Famous for Ajvar.",
+    ],
+    funFactsZh: ["特蕾莎修女出生地。", "奥赫里德湖很古老。", "以Ajvar酱闻名。"],
   },
-  { 
-    code: 'ML', name: 'Mali', nameZh: '马里', emoji: '🇲🇱',
-    funFacts: ["Home to Timbuktu.", "Richest man in history (Mansa Musa).", "Great Mosque of Djenne."],
-    funFactsZh: ["廷巴克图所在地。", "历史上最富有的人(曼萨穆萨)。", "杰内大清真寺。"]
+  {
+    code: "ML",
+    name: "Mali",
+    nameZh: "马里",
+    emoji: "🇲🇱",
+    funFacts: [
+      "Home to Timbuktu.",
+      "Richest man in history (Mansa Musa).",
+      "Great Mosque of Djenne.",
+    ],
+    funFactsZh: [
+      "廷巴克图所在地。",
+      "历史上最富有的人(曼萨穆萨)。",
+      "杰内大清真寺。",
+    ],
   },
-  { 
-    code: 'MM', name: 'Myanmar', nameZh: '缅甸', emoji: '🇲🇲',
-    funFacts: ["Land of Golden Pagodas.", "Men wear skirts (Longyi).", "Tea leaf salad is popular."],
-    funFactsZh: ["金塔之国。", "男人穿裙子(笼基)。", "茶叶沙拉很受欢迎。"]
+  {
+    code: "MM",
+    name: "Myanmar",
+    nameZh: "缅甸",
+    emoji: "🇲🇲",
+    funFacts: [
+      "Land of Golden Pagodas.",
+      "Men wear skirts (Longyi).",
+      "Tea leaf salad is popular.",
+    ],
+    funFactsZh: ["金塔之国。", "男人穿裙子(笼基)。", "茶叶沙拉很受欢迎。"],
   },
-  { 
-    code: 'MN', name: 'Mongolia', nameZh: '蒙古', emoji: '🇲🇳',
-    funFacts: ["Least densely populated.", "Land of the Blue Sky.", "Ghengis Khan is a hero."],
-    funFactsZh: ["人口密度最低。", "蓝天之国。", "成吉思汗是英雄。"]
+  {
+    code: "MN",
+    name: "Mongolia",
+    nameZh: "蒙古",
+    emoji: "🇲🇳",
+    funFacts: [
+      "Least densely populated.",
+      "Land of the Blue Sky.",
+      "Ghengis Khan is a hero.",
+    ],
+    funFactsZh: ["人口密度最低。", "蓝天之国。", "成吉思汗是英雄。"],
   },
-  { 
-    code: 'MR', name: 'Mauritania', nameZh: '毛里塔尼亚', emoji: '🇲🇷',
-    funFacts: ["Rich graveyard of ships.", "Last to abolish slavery.", "Eye of the Sahara."],
-    funFactsZh: ["有很多废弃船只。", "最后废除奴隶制。", "撒哈拉之眼。"]
+  {
+    code: "MR",
+    name: "Mauritania",
+    nameZh: "毛里塔尼亚",
+    emoji: "🇲🇷",
+    funFacts: [
+      "Rich graveyard of ships.",
+      "Last to abolish slavery.",
+      "Eye of the Sahara.",
+    ],
+    funFactsZh: ["有很多废弃船只。", "最后废除奴隶制。", "撒哈拉之眼。"],
   },
-  { 
-    code: 'MT', name: 'Malta', nameZh: '马耳他', emoji: '🇲🇹',
-    funFacts: ["Filming location for Gladiator.", "Drive on the left.", "Knights of Malta."],
-    funFactsZh: ["《角斗士》取景地。", "靠左行驶。", "马耳他骑士团。"]
+  {
+    code: "MT",
+    name: "Malta",
+    nameZh: "马耳他",
+    emoji: "🇲🇹",
+    funFacts: [
+      "Filming location for Gladiator.",
+      "Drive on the left.",
+      "Knights of Malta.",
+    ],
+    funFactsZh: ["《角斗士》取景地。", "靠左行驶。", "马耳他骑士团。"],
   },
-  { 
-    code: 'MU', name: 'Mauritius', nameZh: '毛里求斯', emoji: '🇲🇺',
-    funFacts: ["Home of the Dodo bird.", "Has colored earth.", "Mark Twain loved it."],
-    funFactsZh: ["渡渡鸟的家乡。", "有七色土。", "马克·吐温很喜欢这里。"]
+  {
+    code: "MU",
+    name: "Mauritius",
+    nameZh: "毛里求斯",
+    emoji: "🇲🇺",
+    funFacts: [
+      "Home of the Dodo bird.",
+      "Has colored earth.",
+      "Mark Twain loved it.",
+    ],
+    funFactsZh: ["渡渡鸟的家乡。", "有七色土。", "马克·吐温很喜欢这里。"],
   },
-  { 
-    code: 'MV', name: 'Maldives', nameZh: '马尔代夫', emoji: '🇲🇻',
-    funFacts: ["Lowest country in the world.", "Islands are coral atolls.", "Weekend is Fri-Sat."],
-    funFactsZh: ["世界海拔最低的国家。", "岛屿是珊瑚环礁。", "周末是周五周六。"]
+  {
+    code: "MV",
+    name: "Maldives",
+    nameZh: "马尔代夫",
+    emoji: "🇲🇻",
+    funFacts: [
+      "Lowest country in the world.",
+      "Islands are coral atolls.",
+      "Weekend is Fri-Sat.",
+    ],
+    funFactsZh: [
+      "世界海拔最低的国家。",
+      "岛屿是珊瑚环礁。",
+      "周末是周五周六。",
+    ],
   },
-  { 
-    code: 'MW', name: 'Malawi', nameZh: '马拉维', emoji: '🇲🇼',
-    funFacts: ["Warm Heart of Africa.", "Lake Malawi has cichlids.", "Tea is major export."],
-    funFactsZh: ["非洲的温暖之心。", "马拉维湖有慈鲷。", "茶是主要出口品。"]
+  {
+    code: "MW",
+    name: "Malawi",
+    nameZh: "马拉维",
+    emoji: "🇲🇼",
+    funFacts: [
+      "Warm Heart of Africa.",
+      "Lake Malawi has cichlids.",
+      "Tea is major export.",
+    ],
+    funFactsZh: ["非洲的温暖之心。", "马拉维湖有慈鲷。", "茶是主要出口品。"],
   },
-  { 
-    code: 'MX', name: 'Mexico', nameZh: '墨西哥', emoji: '🇲🇽',
-    funFacts: ["Invented chocolate.", "Chichen Itza pyramid.", "Largest Spanish speaking country."],
-    funFactsZh: ["发明了巧克力。", "奇琴伊察金字塔。", "最大的西班牙语国家。"]
+  {
+    code: "MX",
+    name: "Mexico",
+    nameZh: "墨西哥",
+    emoji: "🇲🇽",
+    funFacts: [
+      "Invented chocolate.",
+      "Chichen Itza pyramid.",
+      "Largest Spanish speaking country.",
+    ],
+    funFactsZh: ["发明了巧克力。", "奇琴伊察金字塔。", "最大的西班牙语国家。"],
   },
-  { 
-    code: 'MY', name: 'Malaysia', nameZh: '马来西亚', emoji: '🇲🇾',
-    funFacts: ["Petronas Towers were tallest.", "Durian is the King of Fruits.", "Has largest flower (Rafflesia)."],
-    funFactsZh: ["双子塔曾是最高的。", "榴莲是水果之王。", "有最大的花(大王花)。"]
+  {
+    code: "MY",
+    name: "Malaysia",
+    nameZh: "马来西亚",
+    emoji: "🇲🇾",
+    funFacts: [
+      "Petronas Towers were tallest.",
+      "Durian is the King of Fruits.",
+      "Has largest flower (Rafflesia).",
+    ],
+    funFactsZh: [
+      "双子塔曾是最高的。",
+      "榴莲是水果之王。",
+      "有最大的花(大王花)。",
+    ],
   },
-  { 
-    code: 'MZ', name: 'Mozambique', nameZh: '莫桑比克', emoji: '🇲🇿',
-    funFacts: ["Flag has an AK-47.", "Beautiful coastline.", "Maputo is capital."],
-    funFactsZh: ["国旗上有AK-47。", "美丽的海岸线。", "首都是马普托。"]
+  {
+    code: "MZ",
+    name: "Mozambique",
+    nameZh: "莫桑比克",
+    emoji: "🇲🇿",
+    funFacts: [
+      "Flag has an AK-47.",
+      "Beautiful coastline.",
+      "Maputo is capital.",
+    ],
+    funFactsZh: ["国旗上有AK-47。", "美丽的海岸线。", "首都是马普托。"],
   },
-  { 
-    code: 'NA', name: 'Namibia', nameZh: '纳米比亚', emoji: '🇳🇦',
+  {
+    code: "NA",
+    name: "Namibia",
+    nameZh: "纳米比亚",
+    emoji: "🇳🇦",
     funFacts: ["Oldest desert (Namib).", "Cheetah capital.", "Skeleton Coast."],
-    funFactsZh: ["最古老的沙漠(纳米布)。", "猎豹之都。", "骷髅海岸。"]
+    funFactsZh: ["最古老的沙漠(纳米布)。", "猎豹之都。", "骷髅海岸。"],
   },
-  { 
-    code: 'NE', name: 'Niger', nameZh: '尼日尔', emoji: '🇳🇪',
-    funFacts: ["Named after Niger River.", "Dinosaur graveyard.", "Very hot climate."],
-    funFactsZh: ["以尼日尔河命名。", "恐龙墓地。", "气候非常炎热。"]
+  {
+    code: "NE",
+    name: "Niger",
+    nameZh: "尼日尔",
+    emoji: "🇳🇪",
+    funFacts: [
+      "Named after Niger River.",
+      "Dinosaur graveyard.",
+      "Very hot climate.",
+    ],
+    funFactsZh: ["以尼日尔河命名。", "恐龙墓地。", "气候非常炎热。"],
   },
-  { 
-    code: 'NG', name: 'Nigeria', nameZh: '尼日利亚', emoji: '🇳🇬',
-    funFacts: ["Most populous in Africa.", "Nollywood film industry.", "Twin capital of the world."],
-    funFactsZh: ["非洲人口最多。", "诺莱坞电影业。", "世界双胞胎之都。"]
+  {
+    code: "NG",
+    name: "Nigeria",
+    nameZh: "尼日利亚",
+    emoji: "🇳🇬",
+    funFacts: [
+      "Most populous in Africa.",
+      "Nollywood film industry.",
+      "Twin capital of the world.",
+    ],
+    funFactsZh: ["非洲人口最多。", "诺莱坞电影业。", "世界双胞胎之都。"],
   },
-  { 
-    code: 'NI', name: 'Nicaragua', nameZh: '尼加拉瓜', emoji: '🇳🇮',
-    funFacts: ["Land of Lakes and Volcanoes.", "Lake Nicaragua has sharks.", "Largest in Central America."],
-    funFactsZh: ["湖泊与火山之国。", "尼加拉瓜湖有鲨鱼。", "中美洲最大。"]
+  {
+    code: "NI",
+    name: "Nicaragua",
+    nameZh: "尼加拉瓜",
+    emoji: "🇳🇮",
+    funFacts: [
+      "Land of Lakes and Volcanoes.",
+      "Lake Nicaragua has sharks.",
+      "Largest in Central America.",
+    ],
+    funFactsZh: ["湖泊与火山之国。", "尼加拉瓜湖有鲨鱼。", "中美洲最大。"],
   },
-  { 
-    code: 'NL', name: 'Netherlands', nameZh: '荷兰', emoji: '🇳🇱',
-    funFacts: ["Tallest people in the world.", "More bikes than people.", "One third is below sea level."],
-    funFactsZh: ["世界上最高的人。", "自行车比人多。", "三分之一低于海平面。"]
+  {
+    code: "NL",
+    name: "Netherlands",
+    nameZh: "荷兰",
+    emoji: "🇳🇱",
+    funFacts: [
+      "Tallest people in the world.",
+      "More bikes than people.",
+      "One third is below sea level.",
+    ],
+    funFactsZh: ["世界上最高的人。", "自行车比人多。", "三分之一低于海平面。"],
   },
-  { 
-    code: 'NO', name: 'Norway', nameZh: '挪威', emoji: '🇳🇴',
-    funFacts: ["Introduced Salmon Sushi to Japan.", "Knighted a penguin.", "Famous for fjords."],
-    funFactsZh: ["向日本引进了三文鱼寿司。", "给企鹅封爵。", "以峡湾闻名。"]
+  {
+    code: "NO",
+    name: "Norway",
+    nameZh: "挪威",
+    emoji: "🇳🇴",
+    funFacts: [
+      "Introduced Salmon Sushi to Japan.",
+      "Knighted a penguin.",
+      "Famous for fjords.",
+    ],
+    funFactsZh: ["向日本引进了三文鱼寿司。", "给企鹅封爵。", "以峡湾闻名。"],
   },
-  { 
-    code: 'NP', name: 'Nepal', nameZh: '尼泊尔', emoji: '🇳🇵',
-    funFacts: ["Home to Mt Everest.", "Flag is not rectangular.", "Buddha was born here."],
-    funFactsZh: ["珠穆朗玛峰所在地。", "国旗不是矩形的。", "佛陀出生于此。"]
+  {
+    code: "NP",
+    name: "Nepal",
+    nameZh: "尼泊尔",
+    emoji: "🇳🇵",
+    funFacts: [
+      "Home to Mt Everest.",
+      "Flag is not rectangular.",
+      "Buddha was born here.",
+    ],
+    funFactsZh: ["珠穆朗玛峰所在地。", "国旗不是矩形的。", "佛陀出生于此。"],
   },
-  { 
-    code: 'NZ', name: 'New Zealand', nameZh: '新西兰', emoji: '🇳🇿',
-    funFacts: ["Lord of the Rings filmed here.", "Sheep outnumber people.", "Kiwi is a bird and fruit."],
-    funFactsZh: ["指环王在此拍摄。", "羊比人多。", "Kiwi既是鸟也是水果。"]
+  {
+    code: "NZ",
+    name: "New Zealand",
+    nameZh: "新西兰",
+    emoji: "🇳🇿",
+    funFacts: [
+      "Lord of the Rings filmed here.",
+      "Sheep outnumber people.",
+      "Kiwi is a bird and fruit.",
+    ],
+    funFactsZh: ["指环王在此拍摄。", "羊比人多。", "Kiwi既是鸟也是水果。"],
   },
-  { 
-    code: 'OM', name: 'Oman', nameZh: '阿曼', emoji: '🇴🇲',
-    funFacts: ["Oldest independent Arab state.", "Famous for Frankincense.", "No income tax."],
-    funFactsZh: ["最古老的独立阿拉伯国家。", "以乳香闻名。", "没有所得税。"]
+  {
+    code: "OM",
+    name: "Oman",
+    nameZh: "阿曼",
+    emoji: "🇴🇲",
+    funFacts: [
+      "Oldest independent Arab state.",
+      "Famous for Frankincense.",
+      "No income tax.",
+    ],
+    funFactsZh: ["最古老的独立阿拉伯国家。", "以乳香闻名。", "没有所得税。"],
   },
-  { 
-    code: 'PA', name: 'Panama', nameZh: '巴拿马', emoji: '🇵🇦',
-    funFacts: ["Panama Canal connects oceans.", "Only place to see sun rise on Pacific.", "Panama hat is from Ecuador."],
-    funFactsZh: ["巴拿马运河连接海洋。", "唯一能在太平洋看日出的地方。", "巴拿马草帽来自厄瓜多尔。"]
+  {
+    code: "PA",
+    name: "Panama",
+    nameZh: "巴拿马",
+    emoji: "🇵🇦",
+    funFacts: [
+      "Panama Canal connects oceans.",
+      "Only place to see sun rise on Pacific.",
+      "Panama hat is from Ecuador.",
+    ],
+    funFactsZh: [
+      "巴拿马运河连接海洋。",
+      "唯一能在太平洋看日出的地方。",
+      "巴拿马草帽来自厄瓜多尔。",
+    ],
   },
-  { 
-    code: 'PE', name: 'Peru', nameZh: '秘鲁', emoji: '🇵🇪',
-    funFacts: ["Machu Picchu is here.", "Potatoes originated here.", "Guinea pig is eaten."],
-    funFactsZh: ["马丘比丘在此。", "土豆起源于此。", "吃豚鼠。"]
+  {
+    code: "PE",
+    name: "Peru",
+    nameZh: "秘鲁",
+    emoji: "🇵🇪",
+    funFacts: [
+      "Machu Picchu is here.",
+      "Potatoes originated here.",
+      "Guinea pig is eaten.",
+    ],
+    funFactsZh: ["马丘比丘在此。", "土豆起源于此。", "吃豚鼠。"],
   },
-  { 
-    code: 'PG', name: 'Papua New Guinea', nameZh: '巴布亚新几内亚', emoji: '🇵🇬',
-    funFacts: ["Most linguistically diverse.", "800+ languages.", "Birds of Paradise."],
-    funFactsZh: ["语言最多样化。", "800多种语言。", "极乐鸟。"]
+  {
+    code: "PG",
+    name: "Papua New Guinea",
+    nameZh: "巴布亚新几内亚",
+    emoji: "🇵🇬",
+    funFacts: [
+      "Most linguistically diverse.",
+      "800+ languages.",
+      "Birds of Paradise.",
+    ],
+    funFactsZh: ["语言最多样化。", "800多种语言。", "极乐鸟。"],
   },
-  { 
-    code: 'PH', name: 'Philippines', nameZh: '菲律宾', emoji: '🇵🇭',
-    funFacts: ["7000+ islands.", "Texting capital of world.", "Jeepneys are iconic."],
-    funFactsZh: ["7000多个岛屿。", "世界短信之都。", "吉普尼车是标志。"]
+  {
+    code: "PH",
+    name: "Philippines",
+    nameZh: "菲律宾",
+    emoji: "🇵🇭",
+    funFacts: [
+      "7000+ islands.",
+      "Texting capital of world.",
+      "Jeepneys are iconic.",
+    ],
+    funFactsZh: ["7000多个岛屿。", "世界短信之都。", "吉普尼车是标志。"],
   },
-  { 
-    code: 'PK', name: 'Pakistan', nameZh: '巴基斯坦', emoji: '🇵🇰',
-    funFacts: ["Produces mostly footballs.", "K2 is the second highest peak.", "Indus Valley Civilization."],
-    funFactsZh: ["生产大部分足球。", "乔戈里峰是第二高峰。", "印度河文明。"]
+  {
+    code: "PK",
+    name: "Pakistan",
+    nameZh: "巴基斯坦",
+    emoji: "🇵🇰",
+    funFacts: [
+      "Produces mostly footballs.",
+      "K2 is the second highest peak.",
+      "Indus Valley Civilization.",
+    ],
+    funFactsZh: ["生产大部分足球。", "乔戈里峰是第二高峰。", "印度河文明。"],
   },
-  { 
-    code: 'PL', name: 'Poland', nameZh: '波兰', emoji: '🇵🇱',
-    funFacts: ["Marie Curie was Polish.", "Bagels originated here.", "Europe's heaviest animals (Bison)."],
-    funFactsZh: ["居里夫人是波兰人。", "百吉饼起源于此。", "欧洲最重的动物(野牛)。"]
+  {
+    code: "PL",
+    name: "Poland",
+    nameZh: "波兰",
+    emoji: "🇵🇱",
+    funFacts: [
+      "Marie Curie was Polish.",
+      "Bagels originated here.",
+      "Europe's heaviest animals (Bison).",
+    ],
+    funFactsZh: [
+      "居里夫人是波兰人。",
+      "百吉饼起源于此。",
+      "欧洲最重的动物(野牛)。",
+    ],
   },
-  { 
-    code: 'PT', name: 'Portugal', nameZh: '葡萄牙', emoji: '🇵🇹',
-    funFacts: ["Oldest country in Europe.", "Cork producer.", "Port wine is famous."],
-    funFactsZh: ["欧洲最古老的国家。", "软木塞生产国。", "波特酒很出名。"]
+  {
+    code: "PT",
+    name: "Portugal",
+    nameZh: "葡萄牙",
+    emoji: "🇵🇹",
+    funFacts: [
+      "Oldest country in Europe.",
+      "Cork producer.",
+      "Port wine is famous.",
+    ],
+    funFactsZh: ["欧洲最古老的国家。", "软木塞生产国。", "波特酒很出名。"],
   },
-  { 
-    code: 'PY', name: 'Paraguay', nameZh: '巴拉圭', emoji: '🇵🇾',
-    funFacts: ["Flag has two different sides.", "Guarani is an official language.", "Uses hydropower."],
-    funFactsZh: ["国旗两面不同。", "瓜拉尼语是官方语言。", "使用水力发电。"]
+  {
+    code: "PY",
+    name: "Paraguay",
+    nameZh: "巴拉圭",
+    emoji: "🇵🇾",
+    funFacts: [
+      "Flag has two different sides.",
+      "Guarani is an official language.",
+      "Uses hydropower.",
+    ],
+    funFactsZh: ["国旗两面不同。", "瓜拉尼语是官方语言。", "使用水力发电。"],
   },
-  { 
-    code: 'QA', name: 'Qatar', nameZh: '卡塔尔', emoji: '🇶🇦',
-    funFacts: ["Richest country per capita.", "Hosted 2022 World Cup.", "No forests."],
-    funFactsZh: ["人均最富有的国家。", "举办了2022世界杯。", "没有森林。"]
+  {
+    code: "QA",
+    name: "Qatar",
+    nameZh: "卡塔尔",
+    emoji: "🇶🇦",
+    funFacts: [
+      "Richest country per capita.",
+      "Hosted 2022 World Cup.",
+      "No forests.",
+    ],
+    funFactsZh: ["人均最富有的国家。", "举办了2022世界杯。", "没有森林。"],
   },
-  { 
-    code: 'RO', name: 'Romania', nameZh: '罗马尼亚', emoji: '🇷🇴',
-    funFacts: ["Home to Dracula legend.", "Heaviest building (Parliament).", "Beautiful Carpathians."],
-    funFactsZh: ["德古拉传说的故乡。", "最重的建筑(议会)。", "美丽的喀尔巴阡山脉。"]
+  {
+    code: "RO",
+    name: "Romania",
+    nameZh: "罗马尼亚",
+    emoji: "🇷🇴",
+    funFacts: [
+      "Home to Dracula legend.",
+      "Heaviest building (Parliament).",
+      "Beautiful Carpathians.",
+    ],
+    funFactsZh: [
+      "德古拉传说的故乡。",
+      "最重的建筑(议会)。",
+      "美丽的喀尔巴阡山脉。",
+    ],
   },
-  { 
-    code: 'RS', name: 'Serbia', nameZh: '塞尔维亚', emoji: '🇷🇸',
-    funFacts: ["Raspberry exporter.", "Tesla was Serbian-American.", "Vampire word origin."],
-    funFactsZh: ["树莓出口国。", "特斯拉是塞尔维亚裔。", "吸血鬼一词的起源。"]
+  {
+    code: "RS",
+    name: "Serbia",
+    nameZh: "塞尔维亚",
+    emoji: "🇷🇸",
+    funFacts: [
+      "Raspberry exporter.",
+      "Tesla was Serbian-American.",
+      "Vampire word origin.",
+    ],
+    funFactsZh: ["树莓出口国。", "特斯拉是塞尔维亚裔。", "吸血鬼一词的起源。"],
   },
-  { 
-    code: 'RU', name: 'Russia', nameZh: '俄罗斯', emoji: '🇷🇺',
-    funFacts: ["Largest country.", "Lake Baikal is deepest.", "Trans-Siberian railway."],
-    funFactsZh: ["最大的国家。", "贝加尔湖最深。", "西伯利亚大铁路。"]
+  {
+    code: "RU",
+    name: "Russia",
+    nameZh: "俄罗斯",
+    emoji: "🇷🇺",
+    funFacts: [
+      "Largest country.",
+      "Lake Baikal is deepest.",
+      "Trans-Siberian railway.",
+    ],
+    funFactsZh: ["最大的国家。", "贝加尔湖最深。", "西伯利亚大铁路。"],
   },
-  { 
-    code: 'RW', name: 'Rwanda', nameZh: '卢旺达', emoji: '🇷🇼',
-    funFacts: ["Land of a Thousand Hills.", "Cleanest country in Africa.", "Mountain Gorillas."],
-    funFactsZh: ["千丘之国。", "非洲最干净的国家。", "山地大猩猩。"]
+  {
+    code: "RW",
+    name: "Rwanda",
+    nameZh: "卢旺达",
+    emoji: "🇷🇼",
+    funFacts: [
+      "Land of a Thousand Hills.",
+      "Cleanest country in Africa.",
+      "Mountain Gorillas.",
+    ],
+    funFactsZh: ["千丘之国。", "非洲最干净的国家。", "山地大猩猩。"],
   },
-  { 
-    code: 'SA', name: 'Saudi Arabia', nameZh: '沙特阿拉伯', emoji: '🇸🇦',
+  {
+    code: "SA",
+    name: "Saudi Arabia",
+    nameZh: "沙特阿拉伯",
+    emoji: "🇸🇦",
     funFacts: ["No rivers.", "Largest sand desert.", "Mecca is here."],
-    funFactsZh: ["没有河流。", "最大的沙质沙漠。", "麦加在此。"]
+    funFactsZh: ["没有河流。", "最大的沙质沙漠。", "麦加在此。"],
   },
-  { 
-    code: 'SD', name: 'Sudan', nameZh: '苏丹', emoji: '🇸🇩',
-    funFacts: ["More pyramids than Egypt.", "Once largest in Africa.", "Nile merge."],
-    funFactsZh: ["金字塔比埃及多。", "曾是非洲最大。", "尼罗河交汇处。"]
+  {
+    code: "SD",
+    name: "Sudan",
+    nameZh: "苏丹",
+    emoji: "🇸🇩",
+    funFacts: [
+      "More pyramids than Egypt.",
+      "Once largest in Africa.",
+      "Nile merge.",
+    ],
+    funFactsZh: ["金字塔比埃及多。", "曾是非洲最大。", "尼罗河交汇处。"],
   },
-  { 
-    code: 'SE', name: 'Sweden', nameZh: '瑞典', emoji: '🇸🇪',
+  {
+    code: "SE",
+    name: "Sweden",
+    nameZh: "瑞典",
+    emoji: "🇸🇪",
     funFacts: ["IKEA and ABBA.", "Recycles 99% waste.", "Fika coffee culture."],
-    funFactsZh: ["宜家和ABBA。", "回收99%的垃圾。", "Fika咖啡文化。"]
+    funFactsZh: ["宜家和ABBA。", "回收99%的垃圾。", "Fika咖啡文化。"],
   },
-  { 
-    code: 'SG', name: 'Singapore', nameZh: '新加坡', emoji: '🇸🇬',
-    funFacts: ["City of Lions.", "Chewing gum is banned.", "One of the greenest cities."],
-    funFactsZh: ["狮城。", "禁止口香糖。", "最环保的城市之一。"]
+  {
+    code: "SG",
+    name: "Singapore",
+    nameZh: "新加坡",
+    emoji: "🇸🇬",
+    funFacts: [
+      "City of Lions.",
+      "Chewing gum is banned.",
+      "One of the greenest cities.",
+    ],
+    funFactsZh: ["狮城。", "禁止口香糖。", "最环保的城市之一。"],
   },
-  { 
-    code: 'SI', name: 'Slovenia', nameZh: '斯洛文尼亚', emoji: '🇸🇮',
+  {
+    code: "SI",
+    name: "Slovenia",
+    nameZh: "斯洛文尼亚",
+    emoji: "🇸🇮",
     funFacts: ["Love is in the name.", "Lots of caves.", "Beekeeping is huge."],
-    funFactsZh: ["名字里有爱。", "很多洞穴。", "养蜂业发达。"]
+    funFactsZh: ["名字里有爱。", "很多洞穴。", "养蜂业发达。"],
   },
-  { 
-    code: 'SK', name: 'Slovakia', nameZh: '斯洛伐克', emoji: '🇸🇰',
-    funFacts: ["Most castles per capita.", "Capital borders two countries.", "Automobile producer."],
-    funFactsZh: ["人均城堡最多。", "首都与两国接壤。", "汽车生产国。"]
+  {
+    code: "SK",
+    name: "Slovakia",
+    nameZh: "斯洛伐克",
+    emoji: "🇸🇰",
+    funFacts: [
+      "Most castles per capita.",
+      "Capital borders two countries.",
+      "Automobile producer.",
+    ],
+    funFactsZh: ["人均城堡最多。", "首都与两国接壤。", "汽车生产国。"],
   },
-  { 
-    code: 'SN', name: 'Senegal', nameZh: '塞内加尔', emoji: '🇸🇳',
+  {
+    code: "SN",
+    name: "Senegal",
+    nameZh: "塞内加尔",
+    emoji: "🇸🇳",
     funFacts: ["Pink Lake (Retba).", "Paris-Dakar rally.", "Stable democracy."],
-    funFactsZh: ["粉红湖(Retba)。", "巴黎-达喀尔拉力赛。", "稳定的民主国家。"]
+    funFactsZh: ["粉红湖(Retba)。", "巴黎-达喀尔拉力赛。", "稳定的民主国家。"],
   },
-  { 
-    code: 'SO', name: 'Somalia', nameZh: '索马里', emoji: '🇸🇴',
-    funFacts: ["Longest coastline in mainland Africa.", "Nation of Poets.", "Frankincense producer."],
-    funFactsZh: ["非洲大陆最长海岸线。", "诗人国度。", "乳香生产国。"]
+  {
+    code: "SO",
+    name: "Somalia",
+    nameZh: "索马里",
+    emoji: "🇸🇴",
+    funFacts: [
+      "Longest coastline in mainland Africa.",
+      "Nation of Poets.",
+      "Frankincense producer.",
+    ],
+    funFactsZh: ["非洲大陆最长海岸线。", "诗人国度。", "乳香生产国。"],
   },
-  { 
-    code: 'SV', name: 'El Salvador', nameZh: '萨尔瓦多', emoji: '🇸🇻',
-    funFacts: ["Land of Volcanoes.", "Smallest in Central America.", "Bitcoin legal tender."],
-    funFactsZh: ["火山之国。", "中美洲最小。", "比特币法定货币。"]
+  {
+    code: "SV",
+    name: "El Salvador",
+    nameZh: "萨尔瓦多",
+    emoji: "🇸🇻",
+    funFacts: [
+      "Land of Volcanoes.",
+      "Smallest in Central America.",
+      "Bitcoin legal tender.",
+    ],
+    funFactsZh: ["火山之国。", "中美洲最小。", "比特币法定货币。"],
   },
-  { 
-    code: 'SY', name: 'Syria', nameZh: '叙利亚', emoji: '🇸🇾',
-    funFacts: ["Damascus is oldest capital.", "Historical ruins.", "Diverse culture."],
-    funFactsZh: ["大马士革是最古老的首都。", "历史遗迹。", "多元文化。"]
+  {
+    code: "SY",
+    name: "Syria",
+    nameZh: "叙利亚",
+    emoji: "🇸🇾",
+    funFacts: [
+      "Damascus is oldest capital.",
+      "Historical ruins.",
+      "Diverse culture.",
+    ],
+    funFactsZh: ["大马士革是最古老的首都。", "历史遗迹。", "多元文化。"],
   },
-  { 
-    code: 'TD', name: 'Chad', nameZh: '乍得', emoji: '🇹🇩',
-    funFacts: ["Dead Heart of Africa.", "Lake Chad is shrinking.", "Diverse ethnic groups."],
-    funFactsZh: ["非洲的死寂之心。", "乍得湖正在萎缩。", "多民族。"]
+  {
+    code: "TD",
+    name: "Chad",
+    nameZh: "乍得",
+    emoji: "🇹🇩",
+    funFacts: [
+      "Dead Heart of Africa.",
+      "Lake Chad is shrinking.",
+      "Diverse ethnic groups.",
+    ],
+    funFactsZh: ["非洲的死寂之心。", "乍得湖正在萎缩。", "多民族。"],
   },
-  { 
-    code: 'TG', name: 'Togo', nameZh: '多哥', emoji: '🇹🇬',
+  {
+    code: "TG",
+    name: "Togo",
+    nameZh: "多哥",
+    emoji: "🇹🇬",
     funFacts: ["Voodoo markets.", "Narrow country.", "Phosphate mining."],
-    funFactsZh: ["伏都教市场。", "狭长的国家。", "磷酸盐开采。"]
+    funFactsZh: ["伏都教市场。", "狭长的国家。", "磷酸盐开采。"],
   },
-  { 
-    code: 'TH', name: 'Thailand', nameZh: '泰国', emoji: '🇹🇭',
-    funFacts: ["Land of Smiles.", "Never colonized.", "Bangkok's full name is super long."],
-    funFactsZh: ["微笑之国。", "从未被殖民。", "曼谷全名超长。"]
+  {
+    code: "TH",
+    name: "Thailand",
+    nameZh: "泰国",
+    emoji: "🇹🇭",
+    funFacts: [
+      "Land of Smiles.",
+      "Never colonized.",
+      "Bangkok's full name is super long.",
+    ],
+    funFactsZh: ["微笑之国。", "从未被殖民。", "曼谷全名超长。"],
   },
-  { 
-    code: 'TJ', name: 'Tajikistan', nameZh: '塔吉克斯坦', emoji: '🇹🇯',
-    funFacts: ["90% Mountains.", "Dushanbe means Monday.", "World's second highest dam."],
-    funFactsZh: ["90%是山地。", "杜尚别意为星期一。", "世界第二高大坝。"]
+  {
+    code: "TJ",
+    name: "Tajikistan",
+    nameZh: "塔吉克斯坦",
+    emoji: "🇹🇯",
+    funFacts: [
+      "90% Mountains.",
+      "Dushanbe means Monday.",
+      "World's second highest dam.",
+    ],
+    funFactsZh: ["90%是山地。", "杜尚别意为星期一。", "世界第二高大坝。"],
   },
-  { 
-    code: 'TM', name: 'Turkmenistan', nameZh: '土库曼斯坦', emoji: '🇹🇲',
-    funFacts: ["Door to Hell crater.", "White marble buildings.", "Dictatorship history."],
-    funFactsZh: ["地狱之门火坑。", "白色大理石建筑。", "独裁历史。"]
+  {
+    code: "TM",
+    name: "Turkmenistan",
+    nameZh: "土库曼斯坦",
+    emoji: "🇹🇲",
+    funFacts: [
+      "Door to Hell crater.",
+      "White marble buildings.",
+      "Dictatorship history.",
+    ],
+    funFactsZh: ["地狱之门火坑。", "白色大理石建筑。", "独裁历史。"],
   },
-  { 
-    code: 'TN', name: 'Tunisia', nameZh: '突尼斯', emoji: '🇹🇳',
-    funFacts: ["Star Wars filmed here (Tatooine).", "Carthage ruins.", "Jasmine Revolution."],
-    funFactsZh: ["星球大战在此取景(塔图因)。", "迦太基遗址。", "茉莉花革命。"]
+  {
+    code: "TN",
+    name: "Tunisia",
+    nameZh: "突尼斯",
+    emoji: "🇹🇳",
+    funFacts: [
+      "Star Wars filmed here (Tatooine).",
+      "Carthage ruins.",
+      "Jasmine Revolution.",
+    ],
+    funFactsZh: ["星球大战在此取景(塔图因)。", "迦太基遗址。", "茉莉花革命。"],
   },
-  { 
-    code: 'TR', name: 'Turkey', nameZh: '土耳其', emoji: '🇹🇷',
-    funFacts: ["Straddles two continents.", "Santa Claus born here.", "Tulips originated here."],
-    funFactsZh: ["横跨两大洲。", "圣诞老人出生于此。", "郁金香起源于此。"]
+  {
+    code: "TR",
+    name: "Turkey",
+    nameZh: "土耳其",
+    emoji: "🇹🇷",
+    funFacts: [
+      "Straddles two continents.",
+      "Santa Claus born here.",
+      "Tulips originated here.",
+    ],
+    funFactsZh: ["横跨两大洲。", "圣诞老人出生于此。", "郁金香起源于此。"],
   },
-  { 
-    code: 'TT', name: 'Trinidad & Tobago', nameZh: '特立尼达和多巴哥', emoji: '🇹🇹',
-    funFacts: ["Steelpan drum invented here.", "Limbo dance origin.", "Pitch Lake."],
-    funFactsZh: ["钢鼓在此发明。", "林波舞起源。", "沥青湖。"]
+  {
+    code: "TT",
+    name: "Trinidad & Tobago",
+    nameZh: "特立尼达和多巴哥",
+    emoji: "🇹🇹",
+    funFacts: [
+      "Steelpan drum invented here.",
+      "Limbo dance origin.",
+      "Pitch Lake.",
+    ],
+    funFactsZh: ["钢鼓在此发明。", "林波舞起源。", "沥青湖。"],
   },
-  { 
-    code: 'TW', name: 'Taiwan', nameZh: '台湾', emoji: '🇹🇼',
-    funFacts: ["Night markets are famous.", "Taipei 101.", "Bubble Tea invented here."],
-    funFactsZh: ["夜市闻名。", "台北101。", "珍珠奶茶发明地。"]
+  // {
+  //   code: 'TW', name: 'Taiwan', nameZh: '台湾', emoji: '🇹🇼',
+  //   funFacts: ["Night markets are famous.", "Taipei 101.", "Bubble Tea invented here."],
+  //   funFactsZh: ["夜市闻名。", "台北101。", "珍珠奶茶发明地。"]
+  // },
+  {
+    code: "TZ",
+    name: "Tanzania",
+    nameZh: "坦桑尼亚",
+    emoji: "🇹🇿",
+    funFacts: [
+      "Mt Kilimanjaro.",
+      "Serengeti migration.",
+      "Zanzibar spice island.",
+    ],
+    funFactsZh: ["乞力马扎罗山。", "塞伦盖蒂大迁徙。", "桑给巴尔香料岛。"],
   },
-  { 
-    code: 'TZ', name: 'Tanzania', nameZh: '坦桑尼亚', emoji: '🇹🇿',
-    funFacts: ["Mt Kilimanjaro.", "Serengeti migration.", "Zanzibar spice island."],
-    funFactsZh: ["乞力马扎罗山。", "塞伦盖蒂大迁徙。", "桑给巴尔香料岛。"]
+  {
+    code: "UA",
+    name: "Ukraine",
+    nameZh: "乌克兰",
+    emoji: "🇺🇦",
+    funFacts: [
+      "Breadbasket of Europe.",
+      "Deepest metro station.",
+      "Sunflower oil producer.",
+    ],
+    funFactsZh: ["欧洲粮仓。", "最深的地铁站。", "葵花籽油生产国。"],
   },
-  { 
-    code: 'UA', name: 'Ukraine', nameZh: '乌克兰', emoji: '🇺🇦',
-    funFacts: ["Breadbasket of Europe.", "Deepest metro station.", "Sunflower oil producer."],
-    funFactsZh: ["欧洲粮仓。", "最深的地铁站。", "葵花籽油生产国。"]
+  {
+    code: "UG",
+    name: "Uganda",
+    nameZh: "乌干达",
+    emoji: "🇺🇬",
+    funFacts: [
+      "Pearl of Africa.",
+      "Source of the Nile.",
+      "Youngest population.",
+    ],
+    funFactsZh: ["非洲明珠。", "尼罗河源头。", "人口最年轻。"],
   },
-  { 
-    code: 'UG', name: 'Uganda', nameZh: '乌干达', emoji: '🇺🇬',
-    funFacts: ["Pearl of Africa.", "Source of the Nile.", "Youngest population."],
-    funFactsZh: ["非洲明珠。", "尼罗河源头。", "人口最年轻。"]
-  },
-  { 
-    code: 'US', name: 'United States', nameZh: '美国', emoji: '🇺🇸',
+  {
+    code: "US",
+    name: "United States",
+    nameZh: "美国",
+    emoji: "🇺🇸",
     funFacts: ["3rd largest country.", "Hollywood movies.", "Moon landings."],
-    funFactsZh: ["第三大国家。", "好莱坞电影。", "登月。"]
+    funFactsZh: ["第三大国家。", "好莱坞电影。", "登月。"],
   },
-  { 
-    code: 'UY', name: 'Uruguay', nameZh: '乌拉圭', emoji: '🇺🇾',
-    funFacts: ["Hosted first World Cup.", "More cows than people.", "Mate tea culture."],
-    funFactsZh: ["举办第一届世界杯。", "牛比人多。", "马黛茶文化。"]
+  {
+    code: "UY",
+    name: "Uruguay",
+    nameZh: "乌拉圭",
+    emoji: "🇺🇾",
+    funFacts: [
+      "Hosted first World Cup.",
+      "More cows than people.",
+      "Mate tea culture.",
+    ],
+    funFactsZh: ["举办第一届世界杯。", "牛比人多。", "马黛茶文化。"],
   },
-  { 
-    code: 'UZ', name: 'Uzbekistan', nameZh: '乌兹别克斯坦', emoji: '🇺🇿',
-    funFacts: ["Doubly landlocked.", "Silk Road heart.", "Samarkand is ancient."],
-    funFactsZh: ["双重内陆国。", "丝绸之路中心。", "撒马尔罕古城。"]
+  {
+    code: "UZ",
+    name: "Uzbekistan",
+    nameZh: "乌兹别克斯坦",
+    emoji: "🇺🇿",
+    funFacts: [
+      "Doubly landlocked.",
+      "Silk Road heart.",
+      "Samarkand is ancient.",
+    ],
+    funFactsZh: ["双重内陆国。", "丝绸之路中心。", "撒马尔罕古城。"],
   },
-  { 
-    code: 'VE', name: 'Venezuela', nameZh: '委内瑞拉', emoji: '🇻🇪',
-    funFacts: ["Angel Falls (highest).", "Cheap gas.", "Miss Universe winners."],
-    funFactsZh: ["安赫尔瀑布(最高)。", "廉价汽油。", "环球小姐冠军。"]
+  {
+    code: "VE",
+    name: "Venezuela",
+    nameZh: "委内瑞拉",
+    emoji: "🇻🇪",
+    funFacts: [
+      "Angel Falls (highest).",
+      "Cheap gas.",
+      "Miss Universe winners.",
+    ],
+    funFactsZh: ["安赫尔瀑布(最高)。", "廉价汽油。", "环球小姐冠军。"],
   },
-  { 
-    code: 'VN', name: 'Vietnam', nameZh: '越南', emoji: '🇻🇳',
-    funFacts: ["World's 2nd coffee exporter.", "Motorbikes everywhere.", "Son Doong Cave."],
-    funFactsZh: ["世界第二咖啡出口国。", "摩托车遍地。", "韩松洞。"]
+  {
+    code: "VN",
+    name: "Vietnam",
+    nameZh: "越南",
+    emoji: "🇻🇳",
+    funFacts: [
+      "World's 2nd coffee exporter.",
+      "Motorbikes everywhere.",
+      "Son Doong Cave.",
+    ],
+    funFactsZh: ["世界第二咖啡出口国。", "摩托车遍地。", "韩松洞。"],
   },
-  { 
-    code: 'YE', name: 'Yemen', nameZh: '也门', emoji: '🇾🇪',
-    funFacts: ["Dragon Blood Trees.", "Coffee mocha origin.", "Shibam (Manhattan of Desert)."],
-    funFactsZh: ["龙血树。", "摩卡咖啡起源。", "希巴姆(沙漠曼哈顿)。"]
+  {
+    code: "YE",
+    name: "Yemen",
+    nameZh: "也门",
+    emoji: "🇾🇪",
+    funFacts: [
+      "Dragon Blood Trees.",
+      "Coffee mocha origin.",
+      "Shibam (Manhattan of Desert).",
+    ],
+    funFactsZh: ["龙血树。", "摩卡咖啡起源。", "希巴姆(沙漠曼哈顿)。"],
   },
-  { 
-    code: 'ZA', name: 'South Africa', nameZh: '南非', emoji: '🇿🇦',
+  {
+    code: "ZA",
+    name: "South Africa",
+    nameZh: "南非",
+    emoji: "🇿🇦",
     funFacts: ["3 capital cities.", "Rainbow Nation.", "Table Mountain."],
-    funFactsZh: ["三个首都。", "彩虹之国。", "桌山。"]
+    funFactsZh: ["三个首都。", "彩虹之国。", "桌山。"],
   },
-  { 
-    code: 'ZM', name: 'Zambia', nameZh: '赞比亚', emoji: '🇿🇲',
+  {
+    code: "ZM",
+    name: "Zambia",
+    nameZh: "赞比亚",
+    emoji: "🇿🇲",
     funFacts: ["Victoria Falls.", "Walking safaris.", "Copper rich."],
-    funFactsZh: ["维多利亚瀑布。", "徒步游猎。", "富含铜。"]
+    funFactsZh: ["维多利亚瀑布。", "徒步游猎。", "富含铜。"],
   },
-  { 
-    code: 'ZW', name: 'Zimbabwe', nameZh: '津巴布韦', emoji: '🇿🇼',
-    funFacts: ["Great Zimbabwe ruins.", "Victoria Falls (shared).", "High literacy rate."],
-    funFactsZh: ["大津巴布韦遗址。", "维多利亚瀑布(共享)。", "高识字率。"]
-  }
+  {
+    code: "ZW",
+    name: "Zimbabwe",
+    nameZh: "津巴布韦",
+    emoji: "🇿🇼",
+    funFacts: [
+      "Great Zimbabwe ruins.",
+      "Victoria Falls (shared).",
+      "High literacy rate.",
+    ],
+    funFactsZh: ["大津巴布韦遗址。", "维多利亚瀑布(共享)。", "高识字率。"],
+  },
 ];
