@@ -25,7 +25,7 @@ flag-genius/
 ├── types.ts                  # All TypeScript types and enums
 ├── translations.ts           # i18n strings for 'en' and 'zh'
 ├── constants.ts              # COUNTRIES array (~150 countries) with emoji, names, fun facts
-├── storage.ts                # localStorage helpers for wrong/right tracking
+├── storage.ts                # localStorage helpers (wrong/right tracking + language preference)
 ├── vite.config.ts            # Vite config (port 3000, React plugin, GEMINI_API_KEY passthrough)
 ├── tsconfig.json             # TypeScript config
 ├── package.json              # Dependencies
@@ -78,32 +78,39 @@ interface Question {
 
 ## localStorage (`storage.ts`)
 
-Persists two independent sets of country codes across sessions.
+Persists study history and user preferences across sessions. All keys are centralized in the internal `KEYS` constant.
 
 ```typescript
 // Keys used:
 //   'flaggenius_wrong' → JSON array of country codes answered wrong
 //   'flaggenius_right' → JSON array of country codes answered right
+//   'flaggenius_lang'  → 'en' | 'zh' language preference
 
-getWrongCodes(): string[]    // Returns full array
-getRightCodes(): string[]    // Returns full array
-addWrongCode(code: string)   // Adds to wrong set (deduped via Set)
-addRightCode(code: string)   // Adds to right set (deduped via Set)
-getWrongCount(): number      // Length of wrong set
-getRightCount(): number      // Length of right set
+getWrongCodes(): string[]       // Returns full array
+getRightCodes(): string[]       // Returns full array
+addWrongCode(code: string)      // Adds to wrong set (deduped via Set)
+addRightCode(code: string)      // Adds to right set (deduped via Set)
+getWrongCount(): number         // Length of wrong set
+getRightCount(): number         // Length of right set
+clearWrongCodes(): void         // Removes 'flaggenius_wrong' key entirely
+clearRightCodes(): void         // Removes 'flaggenius_right' key entirely
 ```
 
-**Important:** Both helpers use a `Set` internally so a code is never duplicated. Both lists grow independently — a country can appear in both (right once, wrong another time).
+Language preference is managed directly in `App.tsx` using `localStorage.getItem/setItem('flaggenius_lang')` — not via a dedicated helper, since it's a single scalar value rather than a set.
+
+**Important:** Both code sets use a `Set` internally so a code is never duplicated. Both lists grow independently — a country can appear in both (right once, wrong another time).
 
 ---
 
 ## App-level State & Routing (`App.tsx`)
 
 ```typescript
-gameState: GameState; // Controls which screen is shown
-gameMode: GameMode; // Passed to GameScreen
-studyType: StudyType; // Passed to StudyScreen
-language: Language; // 'en' | 'zh', passed to all children
+gameState: GameState           // Controls which screen is shown
+gameMode: GameMode             // Passed to GameScreen
+studyType: StudyType           // Passed to StudyScreen
+language: Language             // 'en' | 'zh', passed to all children
+confirmClear: StudyType | null // null = no modal; set to open clear-confirmation modal
+counts: { wrong: number, right: number } // Local copy of localStorage counts for instant UI updates
 ```
 
 **Screen routing logic:**
@@ -113,7 +120,13 @@ language: Language; // 'en' | 'zh', passed to all children
 - `STUDY_SELECT` → study type picker (Review Wrong / Review Right)
 - `STUDYING` → `<StudyScreen studyType={studyType} />`
 
-**Study Mode card on the menu** shows live wrong/right counts from `getWrongCount()` / `getRightCount()`. Refreshes on each navigation back to menu.
+**Language persistence:** `language` state is initialized via a lazy `useState` initializer that reads `localStorage.getItem('flaggenius_lang')`, falling back to `'en'`. `toggleLanguage()` writes the new value to localStorage before updating state. Wrapped in `try/catch` for private-browsing safety.
+
+**Study Mode card on the menu** shows live wrong/right counts from `counts.wrong` / `counts.right`. `refreshCounts()` is called whenever navigating to or back from `STUDY_SELECT`.
+
+**STUDY_SELECT screen:** Each card (Review Wrong / Review Right) has a `Trash2` icon button in its top-right corner, only shown when `counts.wrong > 0` / `counts.right > 0`. Clicking opens the confirmation modal by setting `confirmClear` to the appropriate `StudyType`. `handleClear(type)` calls `clearWrongCodes()` or `clearRightCodes()`, refreshes `counts`, then sets `confirmClear` back to `null`.
+
+**Confirmation modal:** Fixed overlay rendered at the root level when `confirmClear !== null`. Clicking the backdrop cancels. Styled red or green depending on which list is being cleared. Cancel sets `confirmClear` to `null`; "Yes, Clear" calls `handleClear`.
 
 **Language toggle button** has `whitespace-nowrap` to prevent "中文" from wrapping to two lines on mobile.
 
@@ -189,7 +202,7 @@ studySelectTitle, studySelectDesc
 reviewWrong, reviewWrongDesc, reviewRight, reviewRightDesc
 countries, noWrongItems, noRightItems, noStudyItemsDesc
 timeUp, studyComplete, totalTime, correctAnswers, missedAnswers, accuracy
-studyAgain, backToStudy, clearRecords, confirmClearWrong, confirmClearRight, confirmClearDesc, confirmYes, confirmNo, nextIn, nextNow
+studyAgain, backToStudy, movingOn, nextIn, nextNow, clearRecords, confirmClearWrong, confirmClearRight, confirmClearDesc, confirmYes, confirmNo
 ```
 
 Country names come from the `Country` object: `country.name` (EN) or `country.nameZh` (ZH).
@@ -249,7 +262,7 @@ const delay = result === "correct" ? 400 : 1500;
 
 ### Clear study history
 
-`localStorage.removeItem('flaggenius_wrong')` and/or `localStorage.removeItem('flaggenius_right')`. Consider adding a reset button in the Study Select screen.
+Trash buttons are built into the Study Select screen — no manual localStorage manipulation needed. To clear programmatically: call `clearWrongCodes()` / `clearRightCodes()` from `storage.ts`.
 
 ### Add AI-powered hints (Gemini API ready)
 
@@ -277,3 +290,4 @@ npm run preview
 - **Tailwind via CDN** — arbitrary values like `shadow-[8px_8px_0px...]` work because the CDN version uses JIT. No PostCSS needed
 - **`emoji-flag` class** in `index.html` forces system emoji fonts for correct flag rendering across platforms
 - **`whitespace-nowrap` on language toggle** — prevents "中文" wrapping to two lines on narrow mobile viewports
+- **Language preference in localStorage** — initialized via lazy `useState(() => localStorage.getItem(...))` so it reads once on mount, never on re-renders. `toggleLanguage` writes before setting state so the value is always committed even if the component unmounts immediately
